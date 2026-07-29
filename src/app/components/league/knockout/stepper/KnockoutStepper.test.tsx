@@ -21,7 +21,7 @@ jest.mock("../../../../navigation/RootNavigator", () => ({
 }));
 
 import KnockoutStepper from "./KnockoutStepper";
-import { LeagueFixture } from "@matchinsights/core";
+import { LeagueFixture } from "open-football-project-core";
 
 jest.mock("react-i18next", () => ({
   useTranslation: () => ({
@@ -38,8 +38,8 @@ jest.mock("@react-navigation/native", () => ({
   }),
 }));
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core") as any;
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core") as any;
   return {
     ...actual,
     normalizeLeagueRound: (name: string) =>

@@ -8,7 +8,7 @@ import {
   ViewStyle,
   GestureResponderEvent,
 } from 'react-native';
-import { ApiService, useCharteableMatchNow, useTopGuysAvailable } from '@matchinsights/core';
+import { ApiService, useCharteableMatchNow, useTopGuysAvailable } from 'open-football-project-core';
 
 import Logo from '../../general/logo/Logo';
 import MatchButton from '../../general/match-button/MatchButton';

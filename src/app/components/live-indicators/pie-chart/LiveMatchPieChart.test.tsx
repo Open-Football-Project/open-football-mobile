@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import LiveMatchPieChart from './LiveMatchPieChart';
-import { IndicatorResult } from '@matchinsights/core';
+import { IndicatorResult } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

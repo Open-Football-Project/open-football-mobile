@@ -5,7 +5,7 @@ import {
   fireEvent,
 } from "@testing-library/react-native";
 import LeagueStanding from "./LeagueStanding";
-import { mockLeagueInfo } from "@matchinsights/core";
+import { mockLeagueInfo } from "open-football-project-core";
 
 jest.mock("../../general/share-svg-button/ShareSvgButton", () => {
   const React = require("react");
@@ -17,8 +17,8 @@ jest.mock("../../general/share-svg-button/ShareSvgButton", () => {
   };
 });
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core") as object;
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core") as object;
   return {
     ...actual,
     buildStandingsSvgString: jest.fn(() => "<svg>standings</svg>"),
@@ -200,7 +200,7 @@ describe("LeagueStanding", () => {
   });
 
   it("passes updated svgString to ShareSvgButton after group change", () => {
-    const { buildStandingsSvgString } = require("@matchinsights/core");
+    const { buildStandingsSvgString } = require("open-football-project-core");
     render(<LeagueStanding leagueInfo={mockLeagueInfo} loading={false} />);
 
     fireEvent.press(screen.getByTestId("button-right"));

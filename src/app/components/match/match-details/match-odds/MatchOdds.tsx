@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Bet } from '@matchinsights/core';
+import { Bet } from 'open-football-project-core';
 import { useTranslation } from 'react-i18next';
 import { ScreenSlider } from '../../../general/screen-slider/ScreenSlider';
 import NoData from '../../../general/no-data/NoData';

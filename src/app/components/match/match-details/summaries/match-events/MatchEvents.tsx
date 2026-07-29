@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { LastFiveMatchesEvents } from '@matchinsights/core';
+import { LastFiveMatchesEvents } from 'open-football-project-core';
 import NoData from '../../../../general/no-data/NoData';
 import { colors, spacing, fontSize, fontWeight, borderRadius } from '../../../../../theme';
 

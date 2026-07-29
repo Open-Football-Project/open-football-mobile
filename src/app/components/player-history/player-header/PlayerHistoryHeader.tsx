@@ -13,7 +13,7 @@ import {
   PlayerMainInfo,
   translateCountry,
   translatePlayerPosition,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import { useTranslation } from 'react-i18next';
 import Logo from '../../general/logo/Logo';
 import { PersonIcon, InjuredIcon } from '../../../icons/Icons';

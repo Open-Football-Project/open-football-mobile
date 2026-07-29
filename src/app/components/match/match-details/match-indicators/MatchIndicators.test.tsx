@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import { MatchIndicators } from './MatchIndicators';
-import { ApiService } from '@matchinsights/core';
+import { ApiService } from 'open-football-project-core';
 
-jest.mock('@matchinsights/core', () => ({
-  ...jest.requireActual('@matchinsights/core'),
+jest.mock('open-football-project-core', () => ({
+  ...jest.requireActual('open-football-project-core'),
   useOddsFeeling: jest.fn(),
   useTeamLeaguesStats: jest.fn(),
   useRestStatus: jest.fn(),
@@ -36,7 +36,7 @@ const {
   useRestStatus,
   useTeamLeaguesStats,
   useHeadToHead,
-} = require('@matchinsights/core');
+} = require('open-football-project-core');
 
 const { MatchIndicatorsSlider } = require('./matchindicator-slider/MatchIndicatorsSlider');
 

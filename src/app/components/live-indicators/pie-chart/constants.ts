@@ -3,7 +3,7 @@ import {
   DonutsChartColors,
   LiveMatchIndicatorsDonut,
   LiveMatchIndicatorsDonutVerdictThresholds,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import { colors } from "../../../theme";
 
 export const LIVE_MATCH_INDICATORS_BRAND: DonutsBrandColor = {

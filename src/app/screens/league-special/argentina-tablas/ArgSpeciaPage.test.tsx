@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { I18nextProvider } from 'react-i18next';
 import i18n from 'i18next';
-import { ArgSpecial } from '@matchinsights/core';
+import { ArgSpecial } from 'open-football-project-core';
 
 
 i18n.init({
@@ -23,7 +23,7 @@ i18n.init({
   },
 });
 
-jest.mock('@matchinsights/core', () => ({
+jest.mock('open-football-project-core', () => ({
   useLeaguePage: jest.fn(),
   leagueLinksToMobileRoutes: jest.fn().mockImplementation((links: any[]) => links.map((l: any) => ({ routeName: l.name, param: l.param, label: l.label }))),
   MobileRoutes: {
@@ -126,7 +126,7 @@ jest.mock('../../../components/general/no-data/NoData', () => {
   };
 });
 
-import { useLeaguePage } from '@matchinsights/core';
+import { useLeaguePage } from 'open-football-project-core';
 
 const Stack = createNativeStackNavigator();
 

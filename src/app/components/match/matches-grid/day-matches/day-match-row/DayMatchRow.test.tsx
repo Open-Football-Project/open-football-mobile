@@ -9,7 +9,7 @@ jest.mock('../../../../../navigation/RootNavigator', () => ({
 }));
 
 import DayMatchRow from './DayMatchRow';
-import { ApiService, OnDayMatch, useCharteableMatchNow, useTopGuysAvailable } from '@matchinsights/core';
+import { ApiService, OnDayMatch, useCharteableMatchNow, useTopGuysAvailable } from 'open-football-project-core';
 import { Routes } from '../../../../../navigation/RootNavigator';
 
 const mockNavigate = jest.fn();
@@ -19,8 +19,8 @@ jest.mock('@react-navigation/native', () => ({
   }),
 }));
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core') as object;
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core') as object;
   return {
     ...actual,
     useCharteableMatchNow: jest.fn(() => ({

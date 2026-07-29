@@ -5,7 +5,7 @@ import {
   ApiService,
   LeaguesGroups,
   useAllLeagues,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import { LeaguesMenu } from '../../components/league/leagues-menu/LeaguesMenu';
 import SubHeader from '../../components/general/sub-header/SubHeader';
 import { colors, spacing, breakpoints } from '../../theme';

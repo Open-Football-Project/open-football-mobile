@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import SubHeader from './SubHeader';
 import { useNavigation } from '@react-navigation/native';
-import { SubheaderRouteMobile } from '@matchinsights/core';
+import { SubheaderRouteMobile } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

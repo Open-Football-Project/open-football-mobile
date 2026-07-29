@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { ApiService, OnDayMatch } from '@matchinsights/core';
+import { ApiService, OnDayMatch } from 'open-football-project-core';
 import DayMatchRow from './day-match-row/DayMatchRow';
 
 interface Props {

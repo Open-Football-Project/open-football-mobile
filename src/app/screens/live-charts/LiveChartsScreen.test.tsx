@@ -5,11 +5,11 @@ import {
   useCharteableOddsStatus,
   useBetMarkets,
   BetMarketInfo,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 
 import LiveChartsScreen from './LiveChartsScreen';
 
-jest.mock('@matchinsights/core');
+jest.mock('open-football-project-core');
 jest.mock('@react-navigation/native');
 jest.mock('react-native-sse', () => jest.fn().mockImplementation(() => ({})));
 

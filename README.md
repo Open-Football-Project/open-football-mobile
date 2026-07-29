@@ -1,4 +1,4 @@
-# Futballero (React Native)
+# Open Football Project (React Native)
 
 This is a React Native app built with TypeScript and React Native 0.84.
 
@@ -92,7 +92,7 @@ The registered app name (from `app.json`) is:
 ```json
 {
   "name": "Futballero",
-  "displayName": "Futballero"
+  "displayName": "Open Football Project"
 }
 ```
 

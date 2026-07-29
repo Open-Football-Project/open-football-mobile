@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { View, Pressable, Text, ScrollView, useWindowDimensions, StyleSheet } from 'react-native';
 import { Svg, Rect, Line, Path, Text as SvgText } from 'react-native-svg';
-import { BetOddsPoint, spreadMinutesToX, resolveLabelOverlap } from '@matchinsights/core';
+import { BetOddsPoint, spreadMinutesToX, resolveLabelOverlap } from 'open-football-project-core';
 import { colors as themeColors, spacing, borderRadius, fontSize, fontWeight } from '../../../../theme';
 
 const PADDING_X = 20;

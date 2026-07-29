@@ -7,7 +7,7 @@ import {
   TextStyle,
   useWindowDimensions,
 } from "react-native";
-import { LeagueGroup, leagueGroupTranslation } from "@matchinsights/core";
+import { LeagueGroup, leagueGroupTranslation } from "open-football-project-core";
 import { useTranslation } from "react-i18next";
 import { LeagueTable } from "../../league-table/LeagueTable";
 import {

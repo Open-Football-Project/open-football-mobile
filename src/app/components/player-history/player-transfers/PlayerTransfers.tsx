@@ -10,7 +10,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTranslation } from 'react-i18next';
-import { PlayerTransferInfo, getFormattedDate } from '@matchinsights/core';
+import { PlayerTransferInfo, getFormattedDate } from 'open-football-project-core';
 import Logo from '../../general/logo/Logo';
 import NoData from '../../general/no-data/NoData';
 import { TransferArrowIcon } from '../../../icons/Icons';

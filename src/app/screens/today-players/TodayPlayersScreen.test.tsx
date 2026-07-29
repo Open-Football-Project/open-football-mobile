@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
-import { useTodayPlayersStatus } from '@matchinsights/core';
+import { useTodayPlayersStatus } from 'open-football-project-core';
 
 import TodayPlayersScreen from './TodayPlayersScreen';
 
-jest.mock('@matchinsights/core', () => ({
-  ...jest.requireActual('@matchinsights/core'),
+jest.mock('open-football-project-core', () => ({
+  ...jest.requireActual('open-football-project-core'),
   useTodayPlayersStatus: jest.fn(),
   translateLeague: jest.fn((leagueName: string) => leagueName),
 }));

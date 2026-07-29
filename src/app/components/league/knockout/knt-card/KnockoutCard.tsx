@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { View, Text, StyleSheet, ViewStyle, TextStyle, useWindowDimensions } from 'react-native';
-import { LeagueFixturesMatch, getFormattedDate } from "@matchinsights/core";
+import { LeagueFixturesMatch, getFormattedDate } from "open-football-project-core";
 import Logo from "../../../general/logo/Logo";
 import MatchButton from "../../../general/match-button/MatchButton";
 import { LiveIcon, TrophyIcon } from '../../../../icons/Icons';

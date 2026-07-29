@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import MomentumOscillatorChart from './MomentumOscillatorChart';
-import { LiveChartPoint, MomentumOscillatorBrandColor } from '@matchinsights/core';
+import { LiveChartPoint, MomentumOscillatorBrandColor } from 'open-football-project-core';
 
 jest.mock('react-native-svg', () => {
   const React = require('react');

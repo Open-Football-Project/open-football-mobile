@@ -10,7 +10,7 @@ import {
   ApiService,
   buildFixtureSvgString,
   teamFixtureMatchesToFixtureRound,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import ShareSvgButton from "../../general/share-svg-button/ShareSvgButton";
 import MatchRow from "../../match/match-row/MatchRow";
 import NoData from "../../general/no-data/NoData";

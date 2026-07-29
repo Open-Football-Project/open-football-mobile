@@ -11,7 +11,7 @@ import {
   DayMatches as DayMatchesType,
   dayMatchesToFixtureRound,
   buildFixtureSvgString,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 
 import { RootStackParamList, Routes } from "../../../navigation/RootNavigator";
 import Logo from "../../general/logo/Logo";

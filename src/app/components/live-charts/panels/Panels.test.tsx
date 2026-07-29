@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import Panels from './Panels';
-import { ChartPanel, ChartPanelType } from '@matchinsights/core';
+import { ChartPanel, ChartPanelType } from 'open-football-project-core';
 
 jest.mock('./indicators-panel/IndicatorsPanel', () => {
   const React = require('react');

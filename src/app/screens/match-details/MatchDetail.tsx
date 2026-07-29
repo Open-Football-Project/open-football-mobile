@@ -16,7 +16,7 @@ import {
   useMatchDetail,
   useHeadToHead,
   useValueBets,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import NoData from '../../components/general/no-data/NoData';
 import SubHeader from '../../components/general/sub-header/SubHeader';
 import {DetailsMainInfo} from '../../components/match/match-details/details-main-info/DetailsMainInfo';
@@ -25,7 +25,7 @@ import {MatchIndicators} from '../../components/match/match-details/match-indica
 import BettingToolWrapper from '../../components/match/match-details/value-bets/wrapper/BettingToolWrapper';
 import {MatchDetailsSecondRow} from '../../components/match/match-details/match-details-second-row/MatchDetailsSecondRow';
 import MatchDetailsThirdRow from '../../components/match/match-details/match-details-third-row/MatchDetailsThirdRow';
-import { MobileRoutes } from '@matchinsights/core';
+import { MobileRoutes } from 'open-football-project-core';
 import { RootStackParamList } from '../../navigation/RootNavigator';
 import { colors, spacing, borderRadius, borders, breakpoints } from '../../theme';
 

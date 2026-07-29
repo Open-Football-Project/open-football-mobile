@@ -11,8 +11,8 @@ jest.mock('../../general/share-svg-button/ShareSvgButton', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => ({
-  ...jest.requireActual('@matchinsights/core'),
+jest.mock('open-football-project-core', () => ({
+  ...jest.requireActual('open-football-project-core'),
   buildTeamTriviaSvg: jest.fn(() => ({
     svgString: '<svg>team-quiz</svg>',
     width: 600,

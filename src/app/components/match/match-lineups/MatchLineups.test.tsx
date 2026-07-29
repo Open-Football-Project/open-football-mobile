@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react-native";
 import MatchLineups from "./MatchLineups";
-import { TeamsLineups, buildMatchLineupsSvgString } from "@matchinsights/core";
+import { TeamsLineups, buildMatchLineupsSvgString } from "open-football-project-core";
 
 jest.mock("react-i18next", () => ({
   useTranslation: () => ({
@@ -11,8 +11,8 @@ jest.mock("react-i18next", () => ({
 
 jest.mock("../../general/no-data/NoData");
 
-jest.mock("@matchinsights/core", () => ({
-  ...jest.requireActual("@matchinsights/core"),
+jest.mock("open-football-project-core", () => ({
+  ...jest.requireActual("open-football-project-core"),
   buildMatchLineupsSvgString: jest.fn(
     (teamA, teamB) => `<svg>${teamA.teamName}</svg>`,
   ),

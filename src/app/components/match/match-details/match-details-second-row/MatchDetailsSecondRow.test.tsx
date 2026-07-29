@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import { MatchDetailsSecondRow } from './MatchDetailsSecondRow';
-import { ApiService } from '@matchinsights/core';
+import { ApiService } from 'open-football-project-core';
 
-jest.mock('@matchinsights/core', () => ({
-  ...jest.requireActual('@matchinsights/core'),
+jest.mock('open-football-project-core', () => ({
+  ...jest.requireActual('open-football-project-core'),
   useLastFiveMatchesEvents: jest.fn(),
   useSeasonStats: jest.fn(),
 }));
@@ -59,7 +59,7 @@ jest.mock('../summaries/match-events/MatchEvents', () => {
   };
 });
 
-const { useSeasonStats, useLastFiveMatchesEvents } = require('@matchinsights/core');
+const { useSeasonStats, useLastFiveMatchesEvents } = require('open-football-project-core');
 
 describe('MatchDetailsSecondRow', () => {
   const mockApiService = {} as ApiService;

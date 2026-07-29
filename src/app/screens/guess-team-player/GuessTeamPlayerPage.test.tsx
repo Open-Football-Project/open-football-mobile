@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import { describe, it, expect, jest, beforeEach } from '@jest/globals';
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core') as any;
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core') as any;
 
   return {
     __esModule: true,
@@ -24,7 +24,7 @@ jest.mock('@react-navigation/native', () => ({
 }));
 
 import GuessTeamPlayerPage from './GuessTeamPlayerPage';
-import { useTeamDetail, useGuessThePlayer } from '@matchinsights/core';
+import { useTeamDetail, useGuessThePlayer } from 'open-football-project-core';
 import { useRoute } from '@react-navigation/native';
 import NoData from '../../components/general/no-data/NoData';
 import SubHeader from '../../components/general/sub-header/SubHeader';

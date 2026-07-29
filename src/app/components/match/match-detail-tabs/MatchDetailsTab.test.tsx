@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import MatchDetailsTabs from './MatchDetailsTabs';
-import { TeamsLineups, TwoTeamsStatistics, MatchEvent } from '@matchinsights/core';
+import { TeamsLineups, TwoTeamsStatistics, MatchEvent } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

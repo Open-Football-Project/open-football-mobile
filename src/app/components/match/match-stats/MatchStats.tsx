@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
-import { TwoTeamsStatistics } from '@matchinsights/core';
+import { TwoTeamsStatistics } from 'open-football-project-core';
 import { useTranslation } from 'react-i18next';
 import NoData from '../../general/no-data/NoData';
 import TeamStats from '../../general/team-stats/TeamStats';

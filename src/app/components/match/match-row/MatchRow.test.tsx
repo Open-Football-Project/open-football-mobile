@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
-import { ApiService, useCharteableMatchNow, useTopGuysAvailable } from '@matchinsights/core';
+import { ApiService, useCharteableMatchNow, useTopGuysAvailable } from 'open-football-project-core';
 
 import MatchRow, { MatchRowData } from './MatchRow';
 
@@ -67,7 +67,7 @@ jest.mock('../../general/top-guys-button/TopGuysButton', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => ({
+jest.mock('open-football-project-core', () => ({
   useCharteableMatchNow: jest.fn(),
   useTopGuysAvailable: jest.fn(),
 }));

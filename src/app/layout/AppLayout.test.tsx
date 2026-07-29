@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import AppLayout from './AppLayout';
-import { ApiService } from '@matchinsights/core';
+import { ApiService } from 'open-football-project-core';
 
 jest.mock('../header/AppHeader', () => {
   const React = require('react');

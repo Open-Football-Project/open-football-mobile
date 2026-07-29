@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import TeamStats from './TeamStats';
-import { TeamStatistic } from '@matchinsights/core';
+import { TeamStatistic } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
@@ -22,8 +22,8 @@ jest.mock('../share-svg-button/ShareSvgButton', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core') as object;
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core') as object;
   return {
     ...actual,
     buildTeamStatsSvgString: jest.fn(() => '<svg>team-stats</svg>'),
@@ -116,7 +116,7 @@ describe('team stats component', () => {
     });
 
     it('calls buildTeamStatsSvgString with title, statistics, and logo', () => {
-      const { buildTeamStatsSvgString } = require('@matchinsights/core');
+      const { buildTeamStatsSvgString } = require('open-football-project-core');
       render(<TeamStats title="Test" statistics={sampleStats} logo="logo.png" />);
       expect(buildTeamStatsSvgString).toHaveBeenCalledWith(
         expect.objectContaining({
@@ -129,7 +129,7 @@ describe('team stats component', () => {
     });
 
     it('calls buildTeamStatsSvgString with undefined logo when not provided', () => {
-      const { buildTeamStatsSvgString } = require('@matchinsights/core');
+      const { buildTeamStatsSvgString } = require('open-football-project-core');
       render(<TeamStats title="Test" statistics={sampleStats} />);
       expect(buildTeamStatsSvgString).toHaveBeenCalledWith(
         expect.objectContaining({ logo: undefined }),
@@ -137,7 +137,7 @@ describe('team stats component', () => {
     });
 
     it('passes statLabel that formats stat names using translation', () => {
-      const { buildTeamStatsSvgString } = require('@matchinsights/core');
+      const { buildTeamStatsSvgString } = require('open-football-project-core');
       render(<TeamStats title="Test" statistics={sampleStats} />);
       const { statLabel } = buildTeamStatsSvgString.mock.calls[0][0];
       expect(statLabel('Shots on Goal')).toBe('STATS.SHOTS_ON_GOAL');

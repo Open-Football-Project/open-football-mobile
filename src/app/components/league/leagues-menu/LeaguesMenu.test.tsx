@@ -96,8 +96,8 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
-jest.mock('@matchinsights/core', () => ({
-  ...jest.requireActual('@matchinsights/core') as any,
+jest.mock('open-football-project-core', () => ({
+  ...jest.requireActual('open-football-project-core') as any,
   translateCountry: (country: string) => country,
 }));
 

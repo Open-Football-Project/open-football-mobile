@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodayPlayerScore } from '@matchinsights/core';
+import { TodayPlayerScore } from 'open-football-project-core';
 
 import NoData from '../../general/no-data/NoData';
 import TodayPlayerCard from '../today-player-card/TodayPlayerCard';

@@ -9,7 +9,7 @@ import {
   useGuessTheTeam,
   useLeaguePage,
   leagueLinksToMobileRoutes,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import { RootStackParamList, Routes } from '../../navigation/RootNavigator';
 import type { RouteProp } from '@react-navigation/native';
 import GuessTheTeam from '../../components/games/team/GuessTheTeam';

@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react-native';
 import StatusOrTime from './StatusOrTime';
-import { getFormattedDate, getFormattedTime } from '@matchinsights/core';
+import { getFormattedDate, getFormattedTime } from 'open-football-project-core';
 
-jest.mock('@matchinsights/core', () => {
-  const actualCore = jest.requireActual('@matchinsights/core');
+jest.mock('open-football-project-core', () => {
+  const actualCore = jest.requireActual('open-football-project-core');
   return {
     ...actualCore,
     getFormattedTime: jest.fn(),

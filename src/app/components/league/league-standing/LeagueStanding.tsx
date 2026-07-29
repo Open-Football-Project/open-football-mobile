@@ -18,7 +18,7 @@ import {
   SvgLeagueTableColDefinition,
   cleanLeagueName,
   leagueTranslationKey,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 
 import { useTranslation } from "react-i18next";
 import {

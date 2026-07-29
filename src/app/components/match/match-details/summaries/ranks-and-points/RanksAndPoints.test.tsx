@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import { useTranslation } from 'react-i18next';
 import { RanksAndPoints } from './RanksAndPoints';
-import { PositionAndPoints } from '@matchinsights/core';
+import { PositionAndPoints } from 'open-football-project-core';
 
 jest.mock('react-i18next');
 jest.mock('../../../../general/no-data/NoData', () => {
@@ -22,8 +22,8 @@ jest.mock('../../../../general/no-data/NoData', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core');
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core');
   return {
     ...actual,
     leagueGroupTranslation: (desc: string, lang: string) => desc,

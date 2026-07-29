@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import TeamDetailsContent from './TeamDetailsContent';
-import { ApiService, TeamDetails, TeamFixture, LeagueBasicInfo, TeamPlayer, SubheaderLink } from '@matchinsights/core';
+import { ApiService, TeamDetails, TeamFixture, LeagueBasicInfo, TeamPlayer, SubheaderLink } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
@@ -98,7 +98,7 @@ jest.mock('../../../components/general/screen-tabs/ScreenTabs', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => ({
+jest.mock('open-football-project-core', () => ({
   teamLinksToMobileRoutes: jest.fn((links) => links),
 }));
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
-import { useMatchesStatus } from '@matchinsights/core';
+import { useMatchesStatus } from 'open-football-project-core';
 import Matches from './Matches';
 
-jest.mock('@matchinsights/core');
+jest.mock('open-football-project-core');
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key: string) => {

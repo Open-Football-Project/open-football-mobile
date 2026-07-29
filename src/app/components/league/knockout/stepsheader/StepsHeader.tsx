@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { View, Text, ScrollView, Pressable, StyleSheet, ViewStyle, TextStyle, useWindowDimensions } from 'react-native';
-import { LeagueFixtureRound } from "@matchinsights/core";
-import { normalizeLeagueRound } from "@matchinsights/core";
+import { LeagueFixtureRound } from "open-football-project-core";
+import { normalizeLeagueRound } from "open-football-project-core";
 import { LiveIcon } from '../../../../icons/Icons';
 import { colors, spacing, borderRadius, fontSize, fontWeight, breakpoints } from '../../../../theme';
 

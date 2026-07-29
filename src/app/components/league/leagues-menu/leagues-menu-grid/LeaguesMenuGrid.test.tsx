@@ -21,7 +21,7 @@ jest.mock('../../../../navigation/RootNavigator', () => ({
 }));
 
 import { LeaguesMenuGrid } from './LeaguesMenuGrid';
-import { LeagueBasicInfo } from '@matchinsights/core';
+import { LeagueBasicInfo } from 'open-football-project-core';
 
 const mockLeagues: LeagueBasicInfo[] = [
   {

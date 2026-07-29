@@ -4,7 +4,7 @@ import {
   TeamsLineups,
   MatchEvent,
   TwoTeamsStatistics,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 
 import MatchEventsTable from '../match-events-table/MatchEventsTable';
 import MatchStats from '../match-stats/MatchStats';

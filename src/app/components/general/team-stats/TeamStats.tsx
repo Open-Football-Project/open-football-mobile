@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
-import { TeamStatistic, buildTeamStatsSvgString } from "@matchinsights/core";
+import { TeamStatistic, buildTeamStatsSvgString } from "open-football-project-core";
 import { useTranslation } from "react-i18next";
 import {
   colors,

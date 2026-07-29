@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
-import { usePlayerHistory, usePlayerInfo } from '@matchinsights/core';
+import { usePlayerHistory, usePlayerInfo } from 'open-football-project-core';
 import { useRoute } from '@react-navigation/native';
 import PlayerHistoryPage from './PlayerHistoryPage';
 
-jest.mock('@matchinsights/core');
+jest.mock('open-football-project-core');
 jest.mock('@react-navigation/native');
 
 jest.mock('react-i18next', () => ({

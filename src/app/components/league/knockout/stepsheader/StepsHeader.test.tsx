@@ -1,11 +1,11 @@
 import { describe, it, expect, jest } from "@jest/globals";
 import { render, screen, fireEvent } from "@testing-library/react-native";
 import StepsHeader from "./StepsHeader";
-import { LeagueFixtureRound } from "@matchinsights/core";
+import { LeagueFixtureRound } from "open-football-project-core";
 import { colors } from "../../../../theme";
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core") as any;
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core") as any;
   return {
     ...actual,
     normalizeLeagueRound: (name: string) =>

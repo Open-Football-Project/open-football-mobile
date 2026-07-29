@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, FlatList, StyleSheet, useWindowDimensions } from 'react-native';
-import { ApiService, useMatchesStatus } from '@matchinsights/core';
+import { ApiService, useMatchesStatus } from 'open-football-project-core';
 import { useTranslation } from 'react-i18next';
 
 import SubHeader from '../../components/general/sub-header/SubHeader';

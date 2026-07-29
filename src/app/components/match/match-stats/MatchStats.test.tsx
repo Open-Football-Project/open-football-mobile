@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import MatchStats from './MatchStats';
-import { mockTeamsStatistics } from '@matchinsights/core';
+import { mockTeamsStatistics } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

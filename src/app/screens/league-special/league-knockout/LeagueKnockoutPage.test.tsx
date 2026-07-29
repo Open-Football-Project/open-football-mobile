@@ -22,7 +22,7 @@ i18n.init({
   },
 });
 
-jest.mock('@matchinsights/core', () => ({
+jest.mock('open-football-project-core', () => ({
   useLeaguePage: jest.fn(),
   cleanLeagueName: jest.fn((name) => name),
   leagueTranslationKey: jest.fn((name) => name.toLowerCase().replace(/\s+/g, '_')),
@@ -91,7 +91,7 @@ jest.mock('../../../components/general/no-data/NoData', () => {
   };
 });
 
-import { useLeaguePage } from '@matchinsights/core';
+import { useLeaguePage } from 'open-football-project-core';
 
 const Stack = createNativeStackNavigator();
 

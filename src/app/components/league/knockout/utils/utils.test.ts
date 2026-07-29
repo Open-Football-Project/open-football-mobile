@@ -1,9 +1,9 @@
 import { describe, it, expect } from "@jest/globals";
 import { flatKnockoutMatches, buildRoundsInOrder, groupByTie } from "./utils";
-import { LeagueFixtureRound, LeagueFixturesMatch } from "@matchinsights/core";
+import { LeagueFixtureRound, LeagueFixturesMatch } from "open-football-project-core";
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core");
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core");
   return {
     ...actual,
     LEAGUE_CUP_ROUNDS: [

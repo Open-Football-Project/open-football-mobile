@@ -7,7 +7,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { PlayerTransferInfo, PlayerTrophyInfo } from '@matchinsights/core';
+import { PlayerTransferInfo, PlayerTrophyInfo } from 'open-football-project-core';
 import PlayerTransfers from '../player-transfers/PlayerTransfers';
 import PlayerTrophies from '../player-trophies/PlayerTrophies';
 import { TransferArrowIcon, TrophyIcon } from '../../../icons/Icons';

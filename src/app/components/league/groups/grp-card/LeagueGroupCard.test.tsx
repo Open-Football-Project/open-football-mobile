@@ -1,7 +1,7 @@
 import { describe, it, expect, jest, beforeEach } from "@jest/globals";
 import { render, screen } from "@testing-library/react-native";
 import LeagueGroupCard from "./LeagueGroupCard";
-import { LeagueGroup } from "@matchinsights/core";
+import { LeagueGroup } from "open-football-project-core";
 
 jest.mock("../../league-table/LeagueTable", () => ({
   LeagueTable: ({ teams }: { teams: any[] }) => {
@@ -13,8 +13,8 @@ jest.mock("../../league-table/LeagueTable", () => ({
   },
 }));
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core") as any;
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core") as any;
   return {
     ...actual,
     leagueGroupTranslation: jest.fn((label: string) => {

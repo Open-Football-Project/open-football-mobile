@@ -7,7 +7,7 @@ import { RootStackParamList, Routes } from '../../../navigation/RootNavigator';
 import Logo from '../logo/Logo';
 import { ChevronLeftIcon } from '../../../icons/Icons';
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders } from '../../../theme';
-import { SubheaderRouteMobile } from '@matchinsights/core';
+import { SubheaderRouteMobile } from 'open-football-project-core';
 
 
 interface SubHeaderProps {

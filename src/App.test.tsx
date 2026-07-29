@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
-import { useApiService } from '@matchinsights/core';
+import { useApiService } from 'open-football-project-core';
 import App from './App';
 
-jest.mock('@matchinsights/core', () => ({
+jest.mock('open-football-project-core', () => ({
   useApiService: jest.fn(),
 }));
 

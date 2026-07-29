@@ -34,7 +34,7 @@ import {
   buildMatchInfoSvgString,
   useCharteableMatchNow,
   useTopGuysAvailable,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 
 const mockApiService = {} as unknown as ApiService;
 
@@ -75,8 +75,8 @@ jest.mock("../../../general/match-button/MatchButton", () => {
   };
 });
 
-jest.mock("@matchinsights/core", () => ({
-  ...jest.requireActual("@matchinsights/core"),
+jest.mock("open-football-project-core", () => ({
+  ...jest.requireActual("open-football-project-core"),
   getFormattedDate: () => "2024-01-15",
   getFormattedTime: () => "14:30",
   leagueTranslationKey: () => "premier",

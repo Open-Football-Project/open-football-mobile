@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { ValueBetsResponse, ValueBetMarket } from '@matchinsights/core';
+import { ValueBetsResponse, ValueBetMarket } from 'open-football-project-core';
 import { useTranslation } from 'react-i18next';
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders, letterSpacing } from '../../../../../theme';
 import ValueBetTable from '../ValueBetTable';

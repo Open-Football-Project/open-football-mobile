@@ -3,7 +3,6 @@
     "msg": "We're currently rolling out internationalization. Some texts may still appear untranslated.",
     "thanks": "Thanks for your patience!"
   },
-
   "navbar": {
     "home": "Home",
     "live": "Live",
@@ -13,12 +12,10 @@
     "leagues": "Leagues",
     "about": "About"
   },
-
   "navigationTitles": {
     "mainmenu": "App Navigation",
     "international": "International"
   },
-
   "country": {
     "world": "International",
     "international": "International",
@@ -37,7 +34,6 @@
     "colombia": "Colombia",
     "chile": "Chile"
   },
-
   "league": {
     "fifa_club_world_cup": "FIFA Club World Cup",
     "world_cup": "World Cup",
@@ -51,7 +47,6 @@
     "reserve_league": "Reserve League",
     "primera_c": "Primera C"
   },
-
   "home": {
     "mainhead": "All Football Leagues, Live Scores & Real-Time Match Insights",
     "headtext": "Discover leagues from every country. Check live scores, stats, and match info in real time.",
@@ -60,26 +55,23 @@
     "chartsbtn": "Live Charts",
     "leaguesbycountry": "Football Leagues by Country",
     "todaymatches": "Today's Matches",
-    "bottomhead": "Futballero - Stay in the game, wherever you are.",
-    "bottomtext": "From Premier League clashes to La Liga showdowns and Copa Libertadores thrillers, Futballero puts global football at your fingertips with live scores and stats.",
+    "bottomhead": "Open Football Project - Stay in the game, wherever you are.",
+    "bottomtext": "From Premier League clashes to La Liga showdowns and Copa Libertadores thrillers, Open Football Project puts global football at your fingertips with live scores and stats.",
     "matchesbtn": "Check Matches",
-    "aboutbtn": "About Futballero",
+    "aboutbtn": "About Open Football Project",
     "todayplayerscta": "Today's Players"
   },
-
   "livepage": {
     "h1": "Real-Time Match Timeline, Stats & Lineups",
     "subheadertitle": "Live Now",
     "countrycontrol": "Select Country",
     "leaguecontrol": "Select League"
   },
-
   "detailtabs": {
     "events": "Match Timeline",
     "stats": "Live Statistics",
     "lineups": "Lineups"
   },
-
   "liveevents": {
     "time": "TIME",
     "goal": "Goal",
@@ -100,7 +92,6 @@
     "varpenaltyconfirmed": "Penalty confirmed",
     "varcard": "VAR card check"
   },
-
   "stats": {
     "shots_on_goal": "Shots on Goal",
     "shots_off_goal": "Shots Off Goal",
@@ -135,16 +126,13 @@
     "penalties_scored": "Penalties Scored",
     "penalties_missed": "Penalties Missed"
   },
-
   "team": {
     "home": "Home Team",
     "away": "Away Team"
   },
-
   "lineups": {
     "substitutes": "Substitutes"
   },
-
   "polls": {
     "matchwinner": "Match Winner",
     "draw": "Draw",
@@ -156,59 +144,45 @@
     "4goals": "4+ Goals",
     "thanks": " Thanks for voting! Results will be available shortly."
   },
-
   "odds": {
     "home": "Home",
     "draw": "Draw",
     "away": "Away",
-
     "over": "Over",
     "under": "Under",
-
     "yes": "Yes",
     "no": "No",
-
     "home_draw": "Home / Draw",
     "home_away": "Home / Away",
     "draw_away": "Draw / Away",
-
     "fair_odds": "Fair Odds",
     "value": "VALUE",
     "gamble_aware": "+18 | Gamble Aware",
-
     "match_winner": "Match Winner",
     "second_half_winner": "Second Half Winner",
-
     "asian_handicap": "Asian Handicap",
     "goals_over_under": "Goals Over/Under",
     "goals_over_under_first_half": "Goals Over/Under First Half",
     "goals_over_under_second_half": "Goals Over/Under Second Half",
-
     "ht_ft_double": "HT/FT Double",
     "both_teams_score": "Both Teams to Score",
-
     "handicap_result": "Handicap Result",
-
     "first_half_winner": "First Half Winner",
     "team_to_score_first": "Team To Score First",
     "team_to_score_last": "Team To Score Last",
     "win_both_halves": "Win Both Halves",
-
     "total_home": "Total - Home",
     "total_away": "Total - Away",
-
     "lineups": "Lineups",
     "live_statistics": "Live Statistics",
     "match_timeline": "Match Timeline"
   },
-
   "matchbtn": {
     "live": "Live",
     "detail": "Info",
     "chart": "Charts",
     "top_guys": "Players"
   },
-
   "nodata": {
     "default": "Not Available",
     "loading": "Loading",
@@ -216,31 +190,23 @@
     "notransfers": "No transfers available",
     "notrophies": "No trophies available"
   },
-
   "about": {
-    "head": "About Futballero",
-
+    "head": "About Open Football Project",
     "t0": "Your Global Football Companion",
-    "text0": "Futballero delivers real-time football coverage from Europe’s elite leagues and emerging tournaments across the Americas. Follow Premier League icons like Manchester United, Liverpool and Arsenal, enjoy La Liga showdowns between Real Madrid and FC Barcelona, and track Serie A giants such as Juventus, Inter Milan and AC Milan. Futballero keeps you connected.",
-
+    "text0": "Open Football Project delivers real-time football coverage from Europe’s elite leagues and emerging tournaments across the Americas. Follow Premier League icons like Manchester United, Liverpool and Arsenal, enjoy La Liga showdowns between Real Madrid and FC Barcelona, and track Serie A giants such as Juventus, Inter Milan and AC Milan. Open Football Project keeps you connected.",
     "t1": "Global Football at Your Fingertips",
     "text1": "Our platform spans top competitions worldwide, from the Championship, League One and League Two to the Bundesliga, Ligue 1, Primeira Liga, MLS, Liga Profesional Argentina, Brasileirão Serie A, Serie A, Serie B and La Liga. Every league offers live tables, match schedules, scorers, assists, cards and full team stats updated in real time.",
-
     "t2": "Built for Fans, Designed for Insight",
-    "text2": "Futballero is your live match companion with instant updates, detailed lineups, substitutions and full performance analytics. Track form, compare clubs and check upcoming fixtures across hundreds of international competitions.",
-
+    "text2": "Open Football Project is your live match companion with instant updates, detailed lineups, substitutions and full performance analytics. Track form, compare clubs and check upcoming fixtures across hundreds of international competitions.",
     "t3": "Our Mission",
-    "text3": "Every fan deserves fast and reliable football data. Our mission is to make global football easier to understand and more enjoyable to follow. Whether you are checking Premier League scores, revisiting Copa Argentina highlights or tracking your MLS team, Futballero converts complex statistics into clear visuals that reveal the stories behind the numbers.",
-
+    "text3": "Every fan deserves fast and reliable football data. Our mission is to make global football easier to understand and more enjoyable to follow. Whether you are checking Premier League scores, revisiting Copa Argentina highlights or tracking your MLS team, Open Football Project converts complex statistics into clear visuals that reveal the stories behind the numbers.",
     "t4": "Join the Game",
-    "text4": "Football never stops and neither do we. From the FA Cup to the Copa del Rey and from the Bundesliga to Serie A, Futballero gives you the flow of the global game in a quick and smooth experience. Explore Matches, live games or discover Leagues organized by country and competition."
+    "text4": "Football never stops and neither do we. From the FA Cup to the Copa del Rey and from the Bundesliga to Serie A, Open Football Project gives you the flow of the global game in a quick and smooth experience. Explore Matches, live games or discover Leagues organized by country and competition."
   },
-
   "leaguespage": {
     "head": "All Football Leagues by Country & International Competitions",
     "title": "Find Your League"
   },
-
   "playerhistory": {
     "head": "Player Transfer History and Trophies",
     "title": "Career",
@@ -253,7 +219,6 @@
     "downloadQuiz": "Generate Quiz",
     "downloadQuizTitle": "Guess the Player"
   },
-
   "player": {
     "nationality": "Nationality",
     "age": "Age",
@@ -264,7 +229,6 @@
     "isInjured": "YES",
     "notInjured": "NO"
   },
-
   "common": {
     "pts": "Pts",
     "pos": "Pos",
@@ -322,7 +286,6 @@
     "venue": "Venue",
     "league": "League",
     "league_cup": "League/Cup",
-
     "season": "Season",
     "round": "Round",
     "score_info": "Score Info",
@@ -360,7 +323,6 @@
     "share": "Share",
     "genquiz": "Generate Quiz"
   },
-
   "knockout": {
     "button": "Knockout Stage",
     "header": "Knockout Stage",
@@ -376,7 +338,6 @@
     "header": "League Groups",
     "title": "Groups Standings & Tables"
   },
-
   "quiz": {
     "football_quizzes": "Football Quizzes",
     "player_quiz": "Player Quiz",
@@ -402,19 +363,16 @@
     "team_quiz_most_used_formation": "Most common formation",
     "team_quiz_top_player": "Interesting Player"
   },
-
   "playerposition": {
     "goalkeeper": "Goalkeeper",
     "defender": "Defender",
     "midfielder": "Midfielder",
     "attacker": "Attacker"
   },
-
   "matches": {
     "head": "Global Football Fixtures & Match Schedule",
     "nodatamsg": "No results. Try a different date, timeframe, or country."
   },
-
   "charts": {
     "no_live_matches": "No matches available right now",
     "no_live_matches_image_alt": "No charts available",
@@ -479,7 +437,6 @@
       "neither": "Neither"
     }
   },
-
   "todayplayers": {
     "subheadertitle": "Today's Players",
     "pick_league": "Select league",
@@ -511,7 +468,6 @@
       "player_to_be_booked": "Player To Be Booked"
     }
   },
-
   "leagues": {
     "head": "League Standings, Fixtures & Rankings",
     "details": "League Details",
@@ -521,7 +477,6 @@
     "fixtures": "Fixtures",
     "rankings": "Rankings"
   },
-
   "matchstatuslong": {
     "not_started": "Not Started",
     "match_finished": "Match Finished",
@@ -539,7 +494,6 @@
     "walkover": "Walkover",
     "break_time": "Break Time"
   },
-
   "matchstatus": {
     "NS": "NS",
     "TIME": "TIME",
@@ -551,7 +505,6 @@
     "BT": "BT",
     "LIVE": "LIVE",
     "INT": "INT",
-
     "FT": "FT",
     "AET": "AET",
     "PEN": "PEN",
@@ -562,12 +515,10 @@
     "WO": "WO",
     "SUSP": "SUSP"
   },
-
   "matchdetails": {
     "head": "Match Information & Statistic",
     "title": "Match Details"
   },
-
   "leaguestanding": {
     "team": "Team",
     "pts": "Pts",
@@ -580,14 +531,12 @@
     "form": "Form",
     "avg": "Avg"
   },
-
   "fixtures": {
     "qualifying_round": "Qualifying Round",
     "qualifying_round_1": "Qualifying Round 1",
     "qualifying_round_2": "Qualifying Round 2",
     "qualifying_round_3": "Qualifying Round 3",
     "qualifying_round_4": "Qualifying Round 4",
-
     "group_stage": "Group Stage",
     "group_stage_1": "Group Stage - 1",
     "group_stage_2": "Group Stage - 2",
@@ -595,17 +544,14 @@
     "group_stage_4": "Group Stage - 4",
     "group_stage_5": "Group Stage - 5",
     "group_stage_6": "Group Stage - 6",
-
     "1st_round": "1st Round",
     "2nd_round": "2nd Round",
     "3rd_round": "3rd Round",
-
     "round_of_32": "Round of 32",
     "round_of_16": "Round of 16",
     "quarter_finals": "Quarter-finals",
     "semi_finals": "Semi-finals",
     "final": "Final",
-
     "regular_season_1": "Regular Season - 1",
     "regular_season_2": "Regular Season - 2",
     "regular_season_3": "Regular Season - 3",
@@ -646,7 +592,6 @@
     "regular_season_38": "Regular Season - 38",
     "regular_season_39": "Regular Season - 39",
     "regular_season_40": "Regular Season - 40",
-
     "1st_phase_1": "1st Phase - 1",
     "1st_phase_2": "1st Phase - 2",
     "1st_phase_3": "1st Phase - 3",
@@ -667,7 +612,6 @@
     "1st_phase_quarter_finals": "1st Phase - Quarter-finals",
     "1st_phase_semi_finals": "1st Phase - Semi-finals",
     "1st_phase_final": "1st Phase - Final",
-
     "2nd_phase_1": "2nd Phase - 1",
     "2nd_phase_2": "2nd Phase - 2",
     "2nd_phase_3": "2nd Phase - 3",
@@ -688,14 +632,12 @@
     "2nd_phase_semi_finals": "2nd Phase - Semi-finals",
     "2nd_phase_final": "2nd Phase - Final"
   },
-
   "teampage": {
     "head": "Team Profile: Squad & Fixtures",
     "title": "Team Details",
     "quiz": "Player Quiz",
     "takequiz": "Take a Quiz"
   },
-
   "argspecial": {
     "title": "Lg Prof. Arg.",
     "head": "Argentina Special League Tables | Annual & Promedios",
@@ -703,145 +645,6 @@
     "anual": "Annual Table",
     "promedios": "Promedios Table"
   },
-
-  "aboutseo": {
-    "title": "About Futballero | Your Football Companion",
-    "description": "Discover Futballero, your all-in-one football app for live scores...",
-    "jsonld": {
-      "name": "About Futballero",
-      "description": "Futballero is a football app designed to bring fans closer...",
-      "publisherName": "Futballero"
-    }
-  },
-
-  "gamepageseo": {
-    "title": "Football Quizzes | Futballero",
-    "description": "Choose your football quiz and test your knowledge! Play Guess The Team or Guess The Player across world leagues.",
-    "jsonld": {
-      "name": "Football Quizzes | Futballero",
-      "description": "Choose your football quiz and test your knowledge! Play Guess The Team or Guess The Player across world leagues.",
-      "publisherName": "Futballero",
-      "quizName": "Football Quizzes",
-      "quizGenre": "Sports Trivia",
-      "quizAbout": "Football Quiz",
-      "author": "Futballero"
-    }
-  },
-
-  "guessPlayerSeo": {
-    "title": "{{teamName}} — Player Quiz | Futballero",
-    "description": "Player Quiz for {{teamName}}! Test your football knowledge by identifying players based on clues, transfers, and achievements. A fun interactive quiz for true fans.",
-
-    "jsonld": {
-      "name": "{{teamName}} Player Quiz | Futballero",
-      "description": "Interactive football quiz for fans of {{teamName}}. Guess the correct player from hints, transfers, and achievements.",
-      "publisherName": "Futballero",
-      "quizName": "Player Quiz",
-      "quizGenre": "Sports Trivia",
-      "author": "Futballero"
-    }
-  },
-
-  "guessTeamSeo": {
-    "title": "{{leagueName}} Team Quiz | Futballero",
-    "description": "{{leagueName}} Team Quiz! Test your football knowledge by identifying clubs based on players, trophies, stadiums, and historic stats.",
-
-    "jsonld": {
-      "name": "{{leagueName}} Team Quiz | Futballero",
-      "description": "{{leagueName}} Interactive football quiz where fans guess the correct team using hints like star players, stadiums, achievements, and history.",
-      "publisherName": "Futballero",
-      "quizName": "Team Quiz",
-      "quizGenre": "Sports Trivia",
-      "author": "Futballero"
-    }
-  },
-
-  "landingSeo": {
-    "title": "Futballero | Live Football Scores, Leagues & Match Stats",
-    "description": "Follow global football leagues and competitions with Futballero. Get live scores, fixtures, stats, and match updates for Premier League, La Liga, Serie A, Bundesliga, and more.",
-
-    "jsonld": {
-      "name": "Futballero",
-      "description": "Futballero is your football companion. Track live matches, league standings, and player stats across top leagues and international competitions.",
-      "publisherName": "Futballero"
-    }
-  },
-
-  "leagueSeo": {
-    "title": "{{leagueName}} standings & fixtures | Futballero",
-    "description": "Follow live and completed football league matches, standings, top scorers, assists, cards, and detailed stats. Get updates on fixtures, results, and insights from teams and players.",
-
-    "jsonld": {
-      "name": "{{leagueName}} standings & fixtures | Futballero",
-      "description": "Live and past football league matches including standings, top scorers, assists, cards, and detailed stats.",
-      "locationName": "Worldwide",
-      "organizerName": "Futballero"
-    }
-  },
-
-  "leaguesAllSeo": {
-    "title": "All Football Leagues | Futballero",
-    "description": "Browse and explore football leagues from around the world. Access standings, fixtures, and match stats from international and domestic leagues including England, Spain, Italy, USA, Brazil, Germany, France, Argentina and more.",
-
-    "jsonld": {
-      "name": "All Football Leagues",
-      "description": "List of football leagues from around the world with links to standings, fixtures, and match stats.",
-      "publisherName": "Futballero"
-    }
-  },
-
-  "livenowseo": {
-    "title": "Live Football Match Timeline, Stats and Lineups | Futballero",
-    "description": "Live football scores, match updates, formations, and detailed stats from leagues worldwide.",
-    "jsonld": {
-      "name": "Live Football Matches",
-      "location": "Worldwide"
-    }
-  },
-
-  "matchseo": {
-    "title": "{{homeTeam}} vs {{awayTeam}} match details & stats | Futballero",
-    "description": "Explore detailed football match information including scores, venues, league info, team performance, last results, and season stats.",
-    "jsonld": {
-      "name": "{{homeTeam}} vs {{awayTeam}} match details & stats | Futballero",
-      "description": "Detailed football match stats including teams, scores, venue, league, season, results, and performance insights.",
-      "location": "Worldwide"
-    }
-  },
-
-  "matchesseo": {
-    "title": "{{selectedDate}} | {{country}} | Futballero",
-    "description": "Explore football matches from top leagues and tournaments worldwide. Stay updated with real-time scores, results, and in-depth match statistics from competitions across the globe.",
-    "jsonld": {
-      "name": "{{country}} football matches {{selectedDate}} | Futballero",
-      "description": "Live and completed football matches from international and club tournaments, including scores, insights, and performance stats.",
-      "location": "Worldwide"
-    }
-  },
-
-  "teamseo": {
-    "title": "{{teamName}} | Futballero",
-    "description": "Explore football team details including squad info, venue, previous and upcoming matches, performance stats, and player insights.",
-    "jsonld": {
-      "name": "{{teamName}} team details | Futballero",
-      "description": "Detailed football team information including squad, venue, past and upcoming matches, player stats, and performance insights.",
-      "location": "Worldwide"
-    }
-  },
-
-  "playerseo": {
-    "title": "{{playerName}} History | Transfers & Trophies",
-    "description": "Explore {{playerName}}'s complete football history, including transfers, trophies, and career highlights on Futballero.",
-
-    "jsonld": {
-      "description": "Professional football career history of {{playerName}}, including transfers and trophies.",
-      "knows": {
-        "transfers": "Football Transfers",
-        "trophies": "Football Trophies"
-      }
-    }
-  },
-
   "indicators": {
     "h2h_history": "Head to Head",
     "momentum": "Momentum",
@@ -856,7 +659,6 @@
       "even": "Even match"
     }
   },
-
   "accessibility": {
     "league_fixtures": "League fixtures and match schedule",
     "previous_round": "Go to previous round",

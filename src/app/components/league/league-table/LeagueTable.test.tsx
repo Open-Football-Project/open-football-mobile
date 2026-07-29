@@ -21,7 +21,7 @@ jest.mock("../../../navigation/RootNavigator", () => ({
 }));
 
 import { LeagueTable } from "./LeagueTable";
-import { LeagueTeamInfo } from "@matchinsights/core";
+import { LeagueTeamInfo } from "open-football-project-core";
 
 const mockTeams: LeagueTeamInfo[] = [
   {
@@ -85,8 +85,8 @@ jest.mock("@react-navigation/native", () => ({
   }),
 }));
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core") as any;
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core") as any;
   return {
     ...actual,
   };

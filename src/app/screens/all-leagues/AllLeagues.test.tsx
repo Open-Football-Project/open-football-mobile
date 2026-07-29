@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import { describe, it, expect, jest, beforeEach } from '@jest/globals';
 import AllLeagues from './AllLeagues';
-import { LeaguesGroups, useAllLeagues, ApiService } from '@matchinsights/core';
+import { LeaguesGroups, useAllLeagues, ApiService } from 'open-football-project-core';
 import { spacing } from '../../theme';
 
 jest.mock('react-native/Libraries/Utilities/useWindowDimensions', () => ({
@@ -64,8 +64,8 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
-jest.mock('@matchinsights/core', () => ({
-  ...jest.requireActual('@matchinsights/core') as any,
+jest.mock('open-football-project-core', () => ({
+  ...jest.requireActual('open-football-project-core') as any,
   useAllLeagues: jest.fn(),
 }));
 

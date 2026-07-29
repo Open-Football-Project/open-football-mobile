@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-native';
 import { useLeagueKnockoutsSvg } from './knockouts-image-hooker';
-import { BracketNode } from '@matchinsights/core';
+import { BracketNode } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
@@ -19,7 +19,7 @@ const mockRounds = [
   },
 ];
 
-jest.mock('@matchinsights/core', () => ({
+jest.mock('open-football-project-core', () => ({
   collectRounds: jest.fn(() => mockRounds),
   buildBracketSvgString: jest.fn(() => '<svg>mock</svg>'),
   SVG_W: 1200,
@@ -28,7 +28,7 @@ jest.mock('@matchinsights/core', () => ({
   SLOT_H: 75,
 }));
 
-import { collectRounds, buildBracketSvgString, HEADER_H, FOOTER_H, SLOT_H } from '@matchinsights/core';
+import { collectRounds, buildBracketSvgString, HEADER_H, FOOTER_H, SLOT_H } from 'open-football-project-core';
 
 const mockRoot: BracketNode = {
   roundKey: 'final',

@@ -6,12 +6,12 @@ describe('AppFooter', () => {
   it('renders the current year and copyright', () => {
     render(<AppFooter />);
     const year = new Date().getFullYear();
-    expect(screen.getByText(`© ${year} futballero.com`)).toBeTruthy();
+    expect(screen.getByText(`© ${year} footballproject.org`)).toBeTruthy();
   });
 
   it('has correct styles for text and container', () => {
     render(<AppFooter />);
-    const text = screen.getByText(/futballero.com/);
+    const text = screen.getByText(/footballproject.org/);
     expect(text.props.style).toEqual(
       expect.objectContaining({
         fontSize: 12,
@@ -24,18 +24,18 @@ describe('AppFooter', () => {
   it('renders correctly on small (mobile) screens', () => {
     jest.spyOn(require('react-native'), 'useWindowDimensions').mockReturnValue({ width: 375, height: 667, scale: 2, fontScale: 2 });
     render(<AppFooter />);
-    expect(screen.getByText(/futballero.com/)).toBeTruthy();
+    expect(screen.getByText(/footballproject.org/)).toBeTruthy();
   });
 
   it('renders correctly on tablet screens', () => {
     jest.spyOn(require('react-native'), 'useWindowDimensions').mockReturnValue({ width: 900, height: 1200, scale: 2, fontScale: 2 });
     render(<AppFooter />);
-    expect(screen.getByText(/futballero.com/)).toBeTruthy();
+    expect(screen.getByText(/footballproject.org/)).toBeTruthy();
   });
 
   it('renders correctly on TV screens', () => {
     jest.spyOn(require('react-native'), 'useWindowDimensions').mockReturnValue({ width: 1920, height: 1080, scale: 2, fontScale: 2 });
     render(<AppFooter />);
-    expect(screen.getByText(/futballero.com/)).toBeTruthy();
+    expect(screen.getByText(/footballproject.org/)).toBeTruthy();
   });
 });

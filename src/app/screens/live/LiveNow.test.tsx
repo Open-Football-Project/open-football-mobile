@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
-import { useLiveNowStatus } from '@matchinsights/core';
+import { useLiveNowStatus } from 'open-football-project-core';
 import LiveNow from './LiveNow';
 
-jest.mock('@matchinsights/core');
+jest.mock('open-football-project-core');
 jest.mock('@react-navigation/native');
 jest.mock('react-native-sse', () => jest.fn().mockImplementation(() => ({})));
 jest.mock('../../icons/Icons', () => ({

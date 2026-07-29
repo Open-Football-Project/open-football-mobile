@@ -14,7 +14,7 @@ import {
   useTodayMatches,
   ApiService,
   MobileRoutes,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import { leagueWeights } from "./landing-data";
 import { RootStackParamList, Routes } from "../../navigation/RootNavigator";
 import {

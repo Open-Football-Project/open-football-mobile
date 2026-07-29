@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { RootNavigator, Routes } from './RootNavigator';
-import { MobileRoutes } from '@matchinsights/core';
+import { MobileRoutes } from 'open-football-project-core';
 
 
 jest.mock('../screens/landing/Landing', () => {

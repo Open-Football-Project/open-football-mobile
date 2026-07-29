@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
-import { PlayerPosition, TodayPlayerScore } from '@matchinsights/core';
+import { PlayerPosition, TodayPlayerScore } from 'open-football-project-core';
 
 import TodayPlayersSlider from '../today-players-slider/TodayPlayersSlider';
 import { spacing, breakpoints } from '../../../theme';

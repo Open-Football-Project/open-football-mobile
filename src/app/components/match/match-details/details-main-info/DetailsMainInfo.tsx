@@ -24,7 +24,7 @@ import {
   buildMatchInfoSvgString,
   useCharteableMatchNow,
   useTopGuysAvailable,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import TeamDetailsInfo from "./team-details-info/TeamDetailsInfo";
 import ShareSvgButton from "../../../general/share-svg-button/ShareSvgButton";
 import MatchButton from "../../../general/match-button/MatchButton";

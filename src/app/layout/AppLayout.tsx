@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import type { ApiService } from '@matchinsights/core';
+import type { ApiService } from 'open-football-project-core';
 import AppHeader from '../header/AppHeader';
 import AppFooter from '../footer/AppFooter';
 import { RootNavigator } from '../navigation/RootNavigator';
