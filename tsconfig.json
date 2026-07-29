@@ -1,0 +1,8 @@
+{
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "types": ["jest", "@testing-library/jest-native"]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "images.d.ts"],
+  "exclude": ["**/node_modules", "**/Pods", "webold"]
+}
