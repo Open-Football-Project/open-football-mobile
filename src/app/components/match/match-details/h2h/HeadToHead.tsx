@@ -6,7 +6,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { H2HDetails, getFormattedDate } from '@matchinsights/core';
+import { H2HDetails, getFormattedDate } from 'open-football-project-core';
 import NoData from '../../../general/no-data/NoData';
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders, breakpoints } from '../../../../theme';
 

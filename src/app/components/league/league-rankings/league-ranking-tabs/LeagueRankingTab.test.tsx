@@ -1,7 +1,7 @@
 import { describe, it, expect, jest } from '@jest/globals';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import LeagueRankingTab from './LeagueRankingTab';
-import { LeagueRankingPlayer } from '@matchinsights/core';
+import { LeagueRankingPlayer } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

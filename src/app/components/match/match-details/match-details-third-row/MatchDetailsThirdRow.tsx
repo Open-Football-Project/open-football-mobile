@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ScreenSlider from '../../../general/screen-slider/ScreenSlider';
 import HeadToHead from '../h2h/HeadToHead';
-import { H2HDetails } from '@matchinsights/core';
+import { H2HDetails } from 'open-football-project-core';
 import { colors, spacing, fontSize, fontWeight } from '../../../../theme';
 
 interface MatchDetailsThirdRowProps {

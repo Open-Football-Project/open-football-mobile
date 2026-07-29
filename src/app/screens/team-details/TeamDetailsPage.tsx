@@ -13,7 +13,7 @@ import {
   useTeamDetail,
   useTeamFixture,
   MobileRoutes,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import NoData from '../../components/general/no-data/NoData';
 import TeamDetailsContent from './content/TeamDetailsContent';
 import { RootStackParamList } from '../../navigation/RootNavigator';

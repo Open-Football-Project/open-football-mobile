@@ -8,7 +8,7 @@ import {
   useOddsFeeling,
   useHeadToHead,
   h2hToIndicator,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import { MatchIndicatorsSlider } from './matchindicator-slider/MatchIndicatorsSlider';
 
 interface MatchIndicatorProps {

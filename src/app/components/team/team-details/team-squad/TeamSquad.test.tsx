@@ -1,7 +1,7 @@
 import { describe, it, expect, jest } from '@jest/globals';
 import { render, screen } from '@testing-library/react-native';
 import TeamSquad from './TeamSquad';
-import { mockPlayers } from '@matchinsights/core';
+import { mockPlayers } from 'open-football-project-core';
 
 jest.mock('./player/PlayerCard', () => {
   const React = require('react');

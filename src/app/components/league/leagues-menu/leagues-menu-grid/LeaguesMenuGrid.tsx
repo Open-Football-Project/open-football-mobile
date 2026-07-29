@@ -15,7 +15,7 @@ import {
   LeagueBasicInfo,
   leagueTranslationKey,
   cleanLeagueName,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import Logo from '../../../../components/general/logo/Logo';
 import { RootStackParamList, Routes } from '../../../../navigation/RootNavigator';
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders, shadows, breakpoints } from '../../../../theme';

@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import Controls from './Controls';
-import { getLocalISODate } from '@matchinsights/core';
+import { getLocalISODate } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

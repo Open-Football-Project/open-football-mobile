@@ -9,7 +9,7 @@ import {
   PlayerPosition,
   translateLeague,
   useTodayPlayersStatus,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 
 import { RootStackParamList } from '../../navigation/RootNavigator';
 import Controls from '../../components/general/controls/Controls';

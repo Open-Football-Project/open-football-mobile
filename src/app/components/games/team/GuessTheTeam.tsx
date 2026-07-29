@@ -21,7 +21,7 @@ import {
   buildTeamTriviaSvg,
   cleanLeagueName,
   leagueTranslationKey,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 
 import {
   colors,

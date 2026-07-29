@@ -11,7 +11,7 @@ import {
   LiveMatch,
   useLiveMatchesStatus,
   useValueBets,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import NoData from '../general/no-data/NoData';
 import BettingToolWrapper from '../match/match-details/value-bets/wrapper/BettingToolWrapper';
 import MatchDetailsTabs from '../match/match-detail-tabs/MatchDetailsTabs';

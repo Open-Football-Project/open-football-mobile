@@ -3,7 +3,7 @@ import { View, Text, ScrollView, FlatList, StyleSheet, Pressable, ViewStyle, Tex
 import { useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { LeagueTeamInfo } from '@matchinsights/core';
+import { LeagueTeamInfo } from 'open-football-project-core';
 import NoData from '../../general/no-data/NoData';
 import Logo from '../../general/logo/Logo';
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders, sizes, breakpoints } from '../../../theme';

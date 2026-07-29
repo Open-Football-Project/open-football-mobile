@@ -26,7 +26,7 @@ jest.mock('react-native-svg', () => ({
   },
 }));
 
-jest.mock('@matchinsights/core', () => ({
+jest.mock('open-football-project-core', () => ({
   useLeagueFixtureBinaryTree: jest.fn(() => ({ roundKey: 'final', tie: null, missingData: false })),
 }));
 
@@ -60,7 +60,7 @@ jest.mock('../../general/no-data/NoData', () => {
 });
 
 import RNShare from 'react-native-share';
-import { useLeagueFixtureBinaryTree } from '@matchinsights/core';
+import { useLeagueFixtureBinaryTree } from 'open-football-project-core';
 import { useLeagueKnockoutsSvg } from './image-hooker/knockouts-image-hooker';
 
 const mockOpen = RNShare.open as jest.Mock;

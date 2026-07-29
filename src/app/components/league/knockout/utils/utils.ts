@@ -1,5 +1,5 @@
-import { LeagueFixtureRound, LeagueFixturesMatch } from "@matchinsights/core";
-import { LEAGUE_CUP_ROUNDS, normalizeLeagueRound } from "@matchinsights/core";
+import { LeagueFixtureRound, LeagueFixturesMatch } from "open-football-project-core";
+import { LEAGUE_CUP_ROUNDS, normalizeLeagueRound } from "open-football-project-core";
 
 export const flatKnockoutMatches = (round: LeagueFixtureRound) =>
   round.days.flatMap((day) => day.matches);

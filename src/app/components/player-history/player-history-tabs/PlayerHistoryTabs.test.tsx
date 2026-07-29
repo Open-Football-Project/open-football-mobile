@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import PlayerHistoryTabs from './PlayerHistoryTabs';
-import { PlayerTransferInfo, PlayerTrophyInfo } from '@matchinsights/core';
+import { PlayerTransferInfo, PlayerTrophyInfo } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

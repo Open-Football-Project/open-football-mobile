@@ -17,7 +17,7 @@ import { CloseIcon, ChevronUpIcon, ChevronDownIcon } from "../icons/Icons";
 import { colors } from "../theme/colors";
 import { spacing, borderRadius } from "../theme/layout";
 import { fontSize, fontWeight } from "../theme/typography";
-import { cleanLeagueName, leagueTranslationKey, MobileRoutes } from "@matchinsights/core";
+import { cleanLeagueName, leagueTranslationKey, MobileRoutes } from "open-football-project-core";
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 

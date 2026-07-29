@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
-import { TodayPlayerScore } from '@matchinsights/core';
+import { TodayPlayerScore } from 'open-football-project-core';
 
 import TodayPlayersPositionRow from './TodayPlayersPositionRow';
 

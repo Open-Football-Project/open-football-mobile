@@ -1,4 +1,4 @@
-# Contributing to match-insights-mobile
+# Contributing to open-football-mobile
 
 Thanks for your interest in contributing. A few rules keep this project consistent and reviewable.
 

@@ -8,7 +8,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { LeagueBasicInfo, TeamDetails } from '@matchinsights/core';
+import { LeagueBasicInfo, TeamDetails } from 'open-football-project-core';
 
 import Logo from '../../../general/logo/Logo';
 import { LeaguesMenuGrid } from '../../../league/leagues-menu/leagues-menu-grid/LeaguesMenuGrid';

@@ -13,7 +13,7 @@ import {
   getFormattedDate,
   translateCountry,
   translateLeague,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import ShareSvgButton from "../../general/share-svg-button/ShareSvgButton";
 import { colors, spacing } from "../../../theme";
 

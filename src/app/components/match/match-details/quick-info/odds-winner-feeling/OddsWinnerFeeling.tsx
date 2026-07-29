@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { OddsWinnerFeeling } from '@matchinsights/core';
+import { OddsWinnerFeeling } from 'open-football-project-core';
 import NoData from '../../../../general/no-data/NoData';
 import ArrowStatusTile from '../../../../general/status-tile/ArrowStatusTile';
 import { spacing } from '../../../../../theme';

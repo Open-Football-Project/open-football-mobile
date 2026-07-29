@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import { useTranslation } from 'react-i18next';
 import MatchEvents from './MatchEvents';
-import { LastFiveMatchesEvents } from '@matchinsights/core';
+import { LastFiveMatchesEvents } from 'open-football-project-core';
 
 jest.mock('react-i18next');
 jest.mock('../../../../general/no-data/NoData', () => {

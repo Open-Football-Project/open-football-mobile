@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
-import { TodayPlayerScore } from '@matchinsights/core';
+import { TodayPlayerScore } from 'open-football-project-core';
 
 import TodayPlayerCard from './TodayPlayerCard';
 
-jest.mock('@matchinsights/core', () => ({
-  ...jest.requireActual('@matchinsights/core'),
+jest.mock('open-football-project-core', () => ({
+  ...jest.requireActual('open-football-project-core'),
   translatePlayerPosition: (position: string) => position,
 }));
 

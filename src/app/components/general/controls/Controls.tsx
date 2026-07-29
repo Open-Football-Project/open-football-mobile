@@ -8,7 +8,7 @@ import {
   FlatList,
   Modal,
 } from 'react-native';
-import { getLocalISODate, DayTimeRange } from '@matchinsights/core';
+import { getLocalISODate, DayTimeRange } from 'open-football-project-core';
 import { useTranslation } from 'react-i18next';
 
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders } from '../../../theme';

@@ -15,7 +15,7 @@ import {
   usePlayerInfo,
   PlayerHistoryInfo,
   PlayerMainInfo,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import SubHeader from '../../components/general/sub-header/SubHeader';
 import NoData from '../../components/general/no-data/NoData';
 import PlayerHeader from '../../components/player-history/player-header/PlayerHistoryHeader';
@@ -25,7 +25,7 @@ import PlayerHistoryShare from '../../components/player-history/player-history-s
 const PLAYER_FALLBACK_PHOTO = Image.resolveAssetSource(
   require('../../assets/images/player.png'),
 ).uri;
-import { MobileRoutes } from '@matchinsights/core';
+import { MobileRoutes } from 'open-football-project-core';
 import { RootStackParamList } from '../../navigation/RootNavigator';
 import { colors, spacing, borderRadius, breakpoints } from '../../theme';
 

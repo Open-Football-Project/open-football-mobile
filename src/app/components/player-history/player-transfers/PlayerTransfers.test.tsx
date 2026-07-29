@@ -21,7 +21,7 @@ jest.mock('../../../navigation/RootNavigator', () => ({
 }));
 
 import PlayerTransfers from './PlayerTransfers';
-import { PlayerTransferInfo } from '@matchinsights/core';
+import { PlayerTransferInfo } from 'open-football-project-core';
 import { Routes } from '../../../navigation/RootNavigator';
 
 const mockNavigate = jest.fn();

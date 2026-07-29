@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { ChartPanel, ChartPanelType } from '@matchinsights/core';
+import { ChartPanel, ChartPanelType } from 'open-football-project-core';
 import MomentumOscillatorChart from '../../charts/momentum-oscillator/MomentumOscillatorChart';
 import PercentageChart from '../../charts/percentage-chart/PercentageChart';
 import OddsChart from '../../charts/odds/OddsChart';

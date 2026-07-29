@@ -6,7 +6,7 @@ import {
   SeasonFormReason,
   TodayPlayerScore,
   translatePlayerPosition,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 
 import { colors, spacing, fontSize, fontWeight, borderRadius, breakpoints } from '../../../theme';
 

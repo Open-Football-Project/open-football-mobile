@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, useWindowDimensions } from 'react-native';
 import { Svg, Rect, Line, Path, Polyline, Defs, ClipPath, Text as SvgText } from 'react-native-svg';
-import { LiveChartPoint, MomentumOscillatorBrandColor, spreadMinutesToX } from '@matchinsights/core';
+import { LiveChartPoint, MomentumOscillatorBrandColor, spreadMinutesToX } from 'open-football-project-core';
 
 const PADDING_X = 20;
 const PADDING_Y = 30;

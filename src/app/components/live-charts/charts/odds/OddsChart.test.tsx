@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import OddsChart from './OddsChart';
-import { BetOddsPoint } from '@matchinsights/core';
+import { BetOddsPoint } from 'open-football-project-core';
 
 jest.mock('react-native-svg', () => {
   const React = require('react');

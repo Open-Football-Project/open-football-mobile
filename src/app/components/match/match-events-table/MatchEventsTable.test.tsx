@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import MatchEventsTable from './MatchEventsTable';
-import { MatchEvent, buildMatchEventsSvgString } from '@matchinsights/core';
+import { MatchEvent, buildMatchEventsSvgString } from 'open-football-project-core';
 
 
 jest.mock('react-i18next', () => ({
@@ -13,12 +13,17 @@ jest.mock('react-i18next', () => ({
 
 jest.mock('../../general/share-svg-button/ShareSvgButton', () => {
   return function MockShareSvgButton(props: any) {
-    return <div testID="share-svg-button" data-svg-string={props.svgString} />;
+    const React = require('react');
+    const { View } = require('react-native');
+    return React.createElement(View, {
+      testID: 'share-svg-button',
+      'data-svg-string': props.svgString,
+    });
   };
 });
 
-jest.mock('@matchinsights/core', () => ({
-  ...jest.requireActual('@matchinsights/core'),
+jest.mock('open-football-project-core', () => ({
+  ...jest.requireActual('open-football-project-core'),
   buildMatchEventsSvgString: jest.fn((data) => `<svg>${data.homeTeamName}</svg>`),
 }));
 

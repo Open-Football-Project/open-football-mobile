@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import MatchDetailsThirdRow from './MatchDetailsThirdRow';
-import { H2HDetails } from '@matchinsights/core';
+import { H2HDetails } from 'open-football-project-core';
 
 jest.mock('../../../general/screen-slider/ScreenSlider', () => {
   const React = require('react');

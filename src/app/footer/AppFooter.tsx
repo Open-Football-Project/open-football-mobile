@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { SITE_DOMAIN } from 'open-football-project-core';
 import { colors } from '../theme/colors';
 import { spacing } from '../theme/layout';
 import { fontSize } from '../theme/typography';
@@ -10,7 +11,7 @@ const AppFooter: React.FC = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        © {currentYear} futballero.com        
+        © {currentYear} {SITE_DOMAIN}
       </Text>
     </View>
   );

@@ -5,7 +5,7 @@ import {
 } from "@testing-library/react-native";
 import { describe, it, expect, jest, beforeEach } from "@jest/globals";
 import { LeagueFixtureComponent } from "./LeagueFixtureComponent";
-import { ApiService, LeagueFixture, mockLeagueFixture, useCharteableMatchNow } from "@matchinsights/core";
+import { ApiService, LeagueFixture, mockLeagueFixture, useCharteableMatchNow } from "open-football-project-core";
 
 const mockApiService = {} as unknown as ApiService;
 
@@ -19,8 +19,8 @@ jest.mock("../../general/share-svg-button/ShareSvgButton", () => {
   };
 });
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core") as object;
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core") as object;
   return {
     ...actual,
     buildFixtureSvgString: jest.fn(() => "<svg>fixture</svg>"),
@@ -652,7 +652,7 @@ describe("LeagueFixtureComponent", () => {
     });
 
     it("calls buildFixtureSvgString with leagueName and leagueLogo", () => {
-      const { buildFixtureSvgString } = require("@matchinsights/core");
+      const { buildFixtureSvgString } = require("open-football-project-core");
       render(
         <LeagueFixtureComponent
           apiService={mockApiService}
@@ -670,7 +670,7 @@ describe("LeagueFixtureComponent", () => {
     });
 
     it("calls buildFixtureSvgString with undefined logo when not provided", () => {
-      const { buildFixtureSvgString } = require("@matchinsights/core");
+      const { buildFixtureSvgString } = require("open-football-project-core");
       render(
         <LeagueFixtureComponent
           apiService={mockApiService}

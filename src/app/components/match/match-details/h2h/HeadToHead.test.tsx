@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import { HeadToHead } from './HeadToHead';
 import { useTranslation } from 'react-i18next';
-import { H2HDetails } from '@matchinsights/core';
+import { H2HDetails } from 'open-football-project-core';
 
 // Mock react-i18next
 jest.mock('react-i18next', () => ({
@@ -17,9 +17,9 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
-// Mock @matchinsights/core
-jest.mock('@matchinsights/core', () => ({
-  ...jest.requireActual('@matchinsights/core'),
+// Mock open-football-project-core
+jest.mock('open-football-project-core', () => ({
+  ...jest.requireActual('open-football-project-core'),
   getFormattedDate: (date: string) => '2025-09-30',
 }));
 

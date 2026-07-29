@@ -7,7 +7,7 @@ import {
   TeamsRestStatus,
   TeamsScorePerformance,
   IndicatorResult,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import LastFiveMatches from '../../quick-info/last-five-matches/LastFiveMatches';
 import TeamsScorePerformanceComponent from '../../quick-info/teams-score-performance/TeamsScorePerformance';
 import TeamsRestStatusComponent from '../../quick-info/teams-rest-status/TeamRestStatus';

@@ -9,7 +9,7 @@ import {
   useValueBets,
   useCharteableMatchNow,
   useTopGuysAvailable,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
@@ -110,7 +110,7 @@ jest.mock('../general/top-guys-button/TopGuysButton', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => ({
+jest.mock('open-football-project-core', () => ({
   useLiveMatchesStatus: jest.fn(),
   useValueBets: jest.fn(),
   useCharteableMatchNow: jest.fn(),

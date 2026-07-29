@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react-native';
 import TeamInfo from './TeamInfo';
-import type { TeamDetails } from '@matchinsights/core';
-import { LeagueBasicInfo } from '@matchinsights/core';
+import type { TeamDetails } from 'open-football-project-core';
+import { LeagueBasicInfo } from 'open-football-project-core';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 

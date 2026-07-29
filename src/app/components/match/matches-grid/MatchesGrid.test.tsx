@@ -21,7 +21,7 @@ jest.mock("../../../navigation/RootNavigator", () => ({
 }));
 
 import MatchesGrid from "./MatchesGrid";
-import { ApiService, DayMatches as DayMatchesType } from "@matchinsights/core";
+import { ApiService, DayMatches as DayMatchesType } from "open-football-project-core";
 import { Routes } from "../../../navigation/RootNavigator";
 
 const mockApiService = {} as unknown as ApiService;
@@ -38,8 +38,8 @@ jest.mock("../../general/share-svg-button/ShareSvgButton", () => {
   };
 });
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core") as object;
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core") as object;
   return {
     ...actual,
     dayMatchesToFixtureRound: jest.fn(() => ({ name: "Round 1", days: [] })),
@@ -264,14 +264,14 @@ describe("MatchesGrid", () => {
 
   describe("Share", () => {
     it("does not call buildFixtureSvgString on initial mount", () => {
-      const { buildFixtureSvgString } = require("@matchinsights/core");
+      const { buildFixtureSvgString } = require("open-football-project-core");
       render(<MatchesGrid apiService={mockApiService} league={mockLeague} />);
 
       expect(buildFixtureSvgString).not.toHaveBeenCalled();
     });
 
     it("calls buildFixtureSvgString with leagueName and leagueLogo when share is pressed", () => {
-      const { buildFixtureSvgString } = require("@matchinsights/core");
+      const { buildFixtureSvgString } = require("open-football-project-core");
       render(<MatchesGrid apiService={mockApiService} league={mockLeague} />);
 
       fireEvent.press(screen.getByTestId("share-button"));
@@ -292,7 +292,7 @@ describe("MatchesGrid", () => {
     });
 
     it("calls buildFixtureSvgString with undefined logo when leagueLogo is null", () => {
-      const { buildFixtureSvgString } = require("@matchinsights/core");
+      const { buildFixtureSvgString } = require("open-football-project-core");
       const leagueNoLogo: DayMatchesType = { ...mockLeague, leagueLogo: null };
       render(<MatchesGrid apiService={mockApiService} league={leagueNoLogo} />);
 

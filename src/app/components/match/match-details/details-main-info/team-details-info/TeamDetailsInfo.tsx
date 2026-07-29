@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Team } from '@matchinsights/core';
+import { Team } from 'open-football-project-core';
 import Logo from '../../../../general/logo/Logo';
 import { colors, spacing, fontSize, fontWeight, breakpoints } from '../../../../../theme';
 import type { RootStackParamList } from '../../../../../navigation/RootNavigator';

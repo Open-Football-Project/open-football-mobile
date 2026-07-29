@@ -1,4 +1,4 @@
-# Claude Code Instructions: match-insights-mobile
+# Claude Code Instructions: open-football-mobile
 
 ## Development method: TDCG
 
@@ -25,6 +25,6 @@ Every feature or behavior change follows this loop. Do not skip steps. Ask befor
 
 ## Project
 
-React Native mobile app (Android) for the footballproject platform — live scores, match insights, odds, and stats for fans. Shares core hooks/logic with the web frontend via `@matchinsights/core`.
+React Native mobile app (Android) for the footballproject platform — live scores, match insights, odds, and stats for fans. Shares core hooks/logic with the web frontend via `open-football-project-core`.
 
 Method reference: [`TDCG/README.md`](TDCG/README.md)

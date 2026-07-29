@@ -1,7 +1,7 @@
 import { describe, it, expect, jest, beforeEach } from '@jest/globals';
 import { render, screen,  fireEvent } from '@testing-library/react-native';
 import TeamDetailsPage from './TeamDetailsPage';
-import { ApiService, useTeamDetail, useTeamFixture,  MobileRoutes } from '@matchinsights/core';
+import { ApiService, useTeamDetail, useTeamFixture,  MobileRoutes } from 'open-football-project-core';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/RootNavigator';
@@ -119,8 +119,8 @@ jest.mock('../../components/general/no-data/NoData', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core') as any;
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core') as any;
   return {
     ...actual,
     useTeamDetail: jest.fn(),

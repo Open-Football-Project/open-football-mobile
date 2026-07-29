@@ -18,7 +18,7 @@ import {
   buildFixtureSvgString,
   cleanLeagueName,
   leagueTranslationKey,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import ShareSvgButton from "../../general/share-svg-button/ShareSvgButton";
 import { useTranslation } from "react-i18next";
 import {

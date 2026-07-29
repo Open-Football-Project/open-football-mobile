@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, ViewStyle } from 'react-native';
-import { TeamPlayer } from '@matchinsights/core';
+import { TeamPlayer } from 'open-football-project-core';
 import PlayerCard from './player/PlayerCard';
 import { ScreenSlider } from '../../../general/screen-slider/ScreenSlider';
 

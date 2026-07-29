@@ -8,7 +8,7 @@ import {
   useGuessThePlayer,
   teamLinksToMobileRoutes,
   MobileRoutes,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import { RootStackParamList, Routes } from '../../navigation/RootNavigator';
 import type { RouteProp } from '@react-navigation/native';
 import GuessThePlayer from '../../components/games/player/GuessThePlayer';

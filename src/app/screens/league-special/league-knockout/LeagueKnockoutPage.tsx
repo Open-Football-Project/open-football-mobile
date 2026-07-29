@@ -17,7 +17,7 @@ import {
   cleanLeagueName,
   leagueTranslationKey,
   leagueLinksToMobileRoutes,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import { colors, spacing, breakpoints } from '../../../theme';
 
 interface LeagueKnockoutPageProps {

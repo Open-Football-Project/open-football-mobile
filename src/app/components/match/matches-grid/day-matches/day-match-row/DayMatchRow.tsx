@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { ApiService, OnDayMatch } from '@matchinsights/core';
+import { ApiService, OnDayMatch } from 'open-football-project-core';
 
 import { RootStackParamList, Routes } from '../../../../../navigation/RootNavigator';
 import MatchRow from '../../../match-row/MatchRow';

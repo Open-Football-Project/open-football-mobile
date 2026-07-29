@@ -1,14 +1,14 @@
 import { describe, it, expect, jest, beforeEach } from '@jest/globals';
 import { render, screen, waitFor, fireEvent } from '@testing-library/react-native';
 import LeaguePage from './LeaguePage';
-import { ApiService, MobileRoutes } from '@matchinsights/core';
+import { ApiService, MobileRoutes } from 'open-football-project-core';
 import {
   mockLeagueInfo,
   mockLeagueFixture,
   mockLeagueRankingPlayers,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 
-import { useLeaguePage } from '@matchinsights/core';
+import { useLeaguePage } from 'open-football-project-core';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/RootNavigator';
@@ -93,8 +93,8 @@ jest.mock('../../components/general/no-data/NoData', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core') as any;
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core') as any;
   return {
     ...actual,
     useLeaguePage: jest.fn(),

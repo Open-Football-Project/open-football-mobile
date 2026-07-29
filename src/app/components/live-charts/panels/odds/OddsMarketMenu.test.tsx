@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import OddsMarketMenu from './OddsMarketMenu';
-import { BetMarketInfo } from '@matchinsights/core';
+import { BetMarketInfo } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

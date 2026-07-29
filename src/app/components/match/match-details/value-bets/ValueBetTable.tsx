@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { ValueBetMarket } from '@matchinsights/core';
+import { ValueBetMarket } from 'open-football-project-core';
 import { useTranslation } from 'react-i18next';
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders, letterSpacing } from '../../../../theme';
 

@@ -15,7 +15,7 @@ import {
   leagueTranslationKey,
   MobileRoutes,
   leagueLinksToMobileRoutes,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import SubHeader from '../../components/general/sub-header/SubHeader';
 import { LeagueFixtureComponent } from '../../components/league/league-fixture/LeagueFixtureComponent';
 import LeagueStanding from '../../components/league/league-standing/LeagueStanding';

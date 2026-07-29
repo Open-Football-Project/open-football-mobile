@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import AppLayout from './app/layout/AppLayout';
 import './app/i18n';
-import { useApiService } from '@matchinsights/core';
+import { useApiService } from 'open-football-project-core';
 
 const queryClient = new QueryClient();
 

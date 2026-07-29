@@ -7,7 +7,7 @@ import {
   Image,
   useWindowDimensions,
 } from "react-native";
-import { MatchEvent, buildMatchEventsSvgString } from "@matchinsights/core";
+import { MatchEvent, buildMatchEventsSvgString } from "open-football-project-core";
 import { useTranslation } from "react-i18next";
 import ShareSvgButton from "../../general/share-svg-button/ShareSvgButton";
 import {

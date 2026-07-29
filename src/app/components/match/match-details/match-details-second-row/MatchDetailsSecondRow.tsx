@@ -4,7 +4,7 @@ import {
   ApiService,
   useSeasonStats,
   useLastFiveMatchesEvents,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import ScreenSlider from "../../../general/screen-slider/ScreenSlider";
 import MatchEvents from "../summaries/match-events/MatchEvents";
 import NoData from "../../../general/no-data/NoData";

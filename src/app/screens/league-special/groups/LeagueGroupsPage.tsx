@@ -21,7 +21,7 @@ import {
   leagueTranslationKey,
   leagueLinksToMobileRoutes,
   leagueGroupTranslation,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import { colors, spacing, borderRadius, breakpoints } from "../../../theme";
 
 interface LeagueGroupsPageProps {

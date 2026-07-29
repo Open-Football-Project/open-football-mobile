@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, View, Text, Pressable, FlatList, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { BetMarketInfo } from '@matchinsights/core';
+import { BetMarketInfo } from 'open-football-project-core';
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders } from '../../../../theme';
 
 interface OddsMarketMenuProps {

@@ -10,7 +10,7 @@ import RNShare from 'react-native-share';
 import ViewShot from 'react-native-view-shot';
 import { SvgXml } from 'react-native-svg';
 import { useTranslation } from 'react-i18next';
-import { LeagueFixture, useLeagueFixtureBinaryTree } from '@matchinsights/core';
+import { LeagueFixture, useLeagueFixtureBinaryTree } from 'open-football-project-core';
 import { useLeagueKnockoutsSvg, SVG_W } from './image-hooker/knockouts-image-hooker';
 import { colors, spacing, borderRadius, fontSize, fontWeight } from '../../../theme';
 import NoData from '../../general/no-data/NoData';

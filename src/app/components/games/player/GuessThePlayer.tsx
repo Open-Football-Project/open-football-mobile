@@ -24,7 +24,7 @@ import {
   translateLeague,
   buildPlayerTriviaSvg,
   SVGItemKind,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 
 import {
   colors,

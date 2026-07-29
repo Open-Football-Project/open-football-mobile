@@ -94,8 +94,8 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core') as any;
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core') as any;
   return {
     ...actual,
     translatePlayerPosition: (position: string) => position,
@@ -123,7 +123,7 @@ jest.mock('../../../../general/share-svg-button/ShareSvgButton', () => {
 });
 
 import PlayerCard from './PlayerCard';
-import { TeamPlayer } from '@matchinsights/core';
+import { TeamPlayer } from 'open-football-project-core';
 
 describe('PlayerCard', () => {
   const mockPlayer: TeamPlayer = {
@@ -212,7 +212,7 @@ describe('PlayerCard', () => {
 
   describe('Share', () => {
     beforeEach(() => {
-      const { buildPlayerCardSvgString } = require('@matchinsights/core');
+      const { buildPlayerCardSvgString } = require('open-football-project-core');
       jest.clearAllMocks();
       buildPlayerCardSvgString
         .mockReturnValueOnce('<svg>player-card</svg>')
@@ -230,7 +230,7 @@ describe('PlayerCard', () => {
     });
 
     it('calls buildPlayerCardSvgString with player data for the share button', () => {
-      const { buildPlayerCardSvgString } = require('@matchinsights/core');
+      const { buildPlayerCardSvgString } = require('open-football-project-core');
       render(<PlayerCard player={mockPlayer} />);
       expect(buildPlayerCardSvgString).toHaveBeenNthCalledWith(
         1,
@@ -246,7 +246,7 @@ describe('PlayerCard', () => {
     });
 
     it('calls buildPlayerCardSvgString with obscured data for the quiz button', () => {
-      const { buildPlayerCardSvgString } = require('@matchinsights/core');
+      const { buildPlayerCardSvgString } = require('open-football-project-core');
       render(<PlayerCard player={mockPlayer} />);
       expect(buildPlayerCardSvgString).toHaveBeenNthCalledWith(
         2,
@@ -259,7 +259,7 @@ describe('PlayerCard', () => {
     });
 
     it('calls buildPlayerCardSvgString with labels for age, position, and number', () => {
-      const { buildPlayerCardSvgString, PlayerSvgLabel } = require('@matchinsights/core');
+      const { buildPlayerCardSvgString, PlayerSvgLabel } = require('open-football-project-core');
       render(<PlayerCard player={mockPlayer} />);
       const labels: Map<unknown, string> = buildPlayerCardSvgString.mock.calls[0][1];
       expect(labels.get(PlayerSvgLabel.AGE)).toBe('Age');

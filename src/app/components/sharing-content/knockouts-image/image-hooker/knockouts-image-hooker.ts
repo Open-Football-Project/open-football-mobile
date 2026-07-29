@@ -9,7 +9,7 @@ import {
   FOOTER_H,
   SLOT_H,
   BracketNode,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 
 export { SVG_W };
 

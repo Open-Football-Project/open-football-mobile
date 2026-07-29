@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react-native";
 import { Share } from "react-native";
 import MatchLiveIndicators from "./MatchLiveIndicators";
-import { TwoTeamsStatistics, useLiveIndicators } from "@matchinsights/core";
+import { TwoTeamsStatistics, useLiveIndicators } from "open-football-project-core";
 
 const mockTranslationFunction = (
   key: string,
@@ -27,7 +27,7 @@ jest.mock("react-i18next", () => ({
   }),
 }));
 
-jest.mock("@matchinsights/core", () => ({
+jest.mock("open-football-project-core", () => ({
   useLiveIndicators: jest.fn(),
   buildLiveIndicatorsDonutsSvgString: jest.fn(),
 }));
@@ -128,7 +128,7 @@ describe("MatchLiveIndicators", () => {
   it("calls buildLiveIndicatorsDonutsSvgString with correct parameters", () => {
     const {
       buildLiveIndicatorsDonutsSvgString,
-    } = require("@matchinsights/core");
+    } = require("open-football-project-core");
     buildLiveIndicatorsDonutsSvgString.mockReturnValue("<svg>test</svg>");
 
     render(
@@ -157,7 +157,7 @@ describe("MatchLiveIndicators", () => {
   it("passes svgString to ShareSvgButton", () => {
     const {
       buildLiveIndicatorsDonutsSvgString,
-    } = require("@matchinsights/core");
+    } = require("open-football-project-core");
     const testSvg = "<svg>live-indicators</svg>";
     buildLiveIndicatorsDonutsSvgString.mockReturnValue(testSvg);
 
@@ -176,7 +176,7 @@ describe("MatchLiveIndicators", () => {
   it("memoizes svgString based on indicators and team names", () => {
     const {
       buildLiveIndicatorsDonutsSvgString,
-    } = require("@matchinsights/core");
+    } = require("open-football-project-core");
     buildLiveIndicatorsDonutsSvgString.mockReturnValue("<svg>test</svg>");
 
     const { rerender } = render(

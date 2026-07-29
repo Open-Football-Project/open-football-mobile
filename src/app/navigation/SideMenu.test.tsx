@@ -8,7 +8,7 @@ import SideMenu from './SideMenu';
 import { RootStackParamList } from './RootNavigator';
 import { colors } from '../theme/colors';
 import { spacing } from '../theme/layout';
-import { MobileRoutes } from '@matchinsights/core';
+import { MobileRoutes } from 'open-football-project-core';
 
 jest.mock('./navigationData', () => ({
   navigationData: [
@@ -30,8 +30,8 @@ jest.mock('./navigationData', () => ({
   ],
 }));
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core') as any;
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core') as any;
   return {
     ...actual,
     cleanLeagueName: (name: string) => name,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import LiveMatchCard from './LiveMatchCard';
-import { ApiService, LiveMatch, useCharteableMatchNow, useTopGuysAvailable } from '@matchinsights/core';
+import { ApiService, LiveMatch, useCharteableMatchNow, useTopGuysAvailable } from 'open-football-project-core';
 
 jest.mock('../../general/logo/Logo', () => {
   const React = require('react');
@@ -61,7 +61,7 @@ jest.mock('../../../icons/Icons', () => ({
   },
 }));
 
-jest.mock('@matchinsights/core', () => ({
+jest.mock('open-football-project-core', () => ({
   useCharteableMatchNow: jest.fn(),
   useTopGuysAvailable: jest.fn(),
 }));

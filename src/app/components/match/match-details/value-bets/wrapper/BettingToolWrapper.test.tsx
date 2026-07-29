@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import BettingToolWrapper from './BettingToolWrapper';
-import { ValueBetsResponse } from '@matchinsights/core';
+import { ValueBetsResponse } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

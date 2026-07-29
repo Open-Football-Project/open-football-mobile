@@ -1,10 +1,10 @@
 import React from "react";
 import { FlatList } from "react-native";
 import { render, screen } from "@testing-library/react-native";
-import { useTodayMatches, ApiService } from "@matchinsights/core";
+import { useTodayMatches, ApiService } from "open-football-project-core";
 import Landing from "./Landing";
 
-jest.mock("@matchinsights/core");
+jest.mock("open-football-project-core");
 
 jest.mock("react-i18next", () => ({
   useTranslation: () => ({

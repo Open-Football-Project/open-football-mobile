@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { buildRoundsInOrder, flatKnockoutMatches } from '../utils/utils';
 import NoData from '../../../general/no-data/NoData';
 import StepsHeader from '../stepsheader/StepsHeader';
-import { normalizeLeagueRound, LeagueFixture } from '@matchinsights/core';
+import { normalizeLeagueRound, LeagueFixture } from 'open-football-project-core';
 import KnockoutCard from '../knt-card/KnockoutCard';
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders, breakpoints } from '../../../../theme';
 

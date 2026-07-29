@@ -12,7 +12,7 @@ import SubHeader from '../../../components/general/sub-header/SubHeader';
 import NoData from '../../../components/general/no-data/NoData';
 import ArgSpecialTable from '../../../components/league/arg-special/ArgSpecialTable';
 import { ScreenTabs, TabItem } from '../../../components/general/screen-tabs/ScreenTabs';
-import { ApiService, useLeaguePage, leagueLinksToMobileRoutes, MobileRoutes, ArgSpecial } from '@matchinsights/core';
+import { ApiService, useLeaguePage, leagueLinksToMobileRoutes, MobileRoutes, ArgSpecial } from 'open-football-project-core';
 import { RootStackParamList } from '../../../navigation/RootNavigator';
 import { colors, spacing, borderRadius, breakpoints } from '../../../theme';
 

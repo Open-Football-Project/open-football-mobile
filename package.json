@@ -1,5 +1,5 @@
 {
-  "name": "Futballero",
+  "name": "open-football-mobile",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -21,7 +21,7 @@
     "emuPortFix": "adb reverse tcp:8081 tcp:8081"
   },
   "dependencies": {
-    "@matchinsights/core": "github:Open-Football-Project/open-football-ui-core",
+    "open-football-project-core": "github:Open-Football-Project/open-football-ui-core",
     "@react-native-async-storage/async-storage": "^2.2.0",
     "@react-navigation/bottom-tabs": "^7.14.0",
     "@react-navigation/native": "^7.1.28",

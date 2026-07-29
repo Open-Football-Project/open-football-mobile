@@ -7,7 +7,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { LeaguesGroups, translateCountry } from '@matchinsights/core';
+import { LeaguesGroups, translateCountry } from 'open-football-project-core';
 import { LeaguesMenuGrid } from './leagues-menu-grid/LeaguesMenuGrid';
 import { LeaguesMenuOptions } from './leagues-menu-options/LeaguesMenuOptions';
 import NoData from '../../general/no-data/NoData';

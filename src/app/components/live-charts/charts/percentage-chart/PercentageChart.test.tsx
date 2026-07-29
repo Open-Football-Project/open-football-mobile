@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import PercentageChart from './PercentageChart';
-import { LiveChartPoint } from '@matchinsights/core';
+import { LiveChartPoint } from 'open-football-project-core';
 
 jest.mock('react-native-svg', () => {
   const React = require('react');

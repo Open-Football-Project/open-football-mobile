@@ -5,7 +5,7 @@ import {
   TwoTeamsStatistics,
   useLiveIndicators,
   buildLiveIndicatorsDonutsSvgString,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import LiveMatchPieChart from "./pie-chart/LiveMatchPieChart";
 import ShareSvgButton from "../general/share-svg-button/ShareSvgButton";
 import { colors, spacing, borderRadius, borders, breakpoints } from "../../theme";

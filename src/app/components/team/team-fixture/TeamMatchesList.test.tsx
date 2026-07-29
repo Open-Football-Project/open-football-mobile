@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react-native";
 import TeamMatchesList, { TeamMatch } from "./TeamMatchesList";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { ApiService, useCharteableMatchNow } from "@matchinsights/core";
+import { ApiService, useCharteableMatchNow } from "open-football-project-core";
 
 const mockApiService = {} as unknown as ApiService;
 
@@ -17,8 +17,8 @@ jest.mock("../../general/share-svg-button/ShareSvgButton", () => {
   };
 });
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core") as object;
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core") as object;
   return {
     ...actual,
     buildFixtureSvgString: jest.fn(() => "<svg>fixture</svg>"),
@@ -104,6 +104,7 @@ describe("TeamMatchesList", () => {
           matches={mockMatches}
           teamName="Barcelona"
           teamLogo="/barca.png"
+          label="Previous"
           apiService={mockApiService}
           {...props}
         />
@@ -208,7 +209,7 @@ describe("TeamMatchesList share button", () => {
   });
 
   it("calls buildFixtureSvgString with teamName and teamLogo", () => {
-    const { buildFixtureSvgString } = require("@matchinsights/core");
+    const { buildFixtureSvgString } = require("open-football-project-core");
     render(
       <NavigationWrapper>
         <TeamMatchesList matches={mockMatches} teamName="Barcelona" teamLogo="/barca.png" label="Previous" apiService={mockApiService} />

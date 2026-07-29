@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import PlayerTrophies from './PlayerTrophies';
-import { PlayerTrophyInfo } from '@matchinsights/core';
+import { PlayerTrophyInfo } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
@@ -25,8 +25,8 @@ jest.mock('../../../icons/Icons', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core');
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core');
   return {
     ...actual,
     translateLeague: (league: string, t?: any) => {

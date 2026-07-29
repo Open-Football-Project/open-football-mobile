@@ -1,6 +1,6 @@
 ## Running on a physical Android device (USB)
 
-You can run Futballero directly on an Android phone, which is lighter than using the emulator.
+You can run Open Football Project directly on an Android phone, which is lighter than using the emulator.
 
 ### 1. Enable developer mode & USB debugging
 

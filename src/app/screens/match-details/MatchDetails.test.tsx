@@ -7,10 +7,10 @@ import {
   isUTCDateTodayLocal,
   isUTCDateInFutureLocal,
   MatchDetails,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import MatchDetail from './MatchDetail';
 
-jest.mock('@matchinsights/core');
+jest.mock('open-football-project-core');
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key: string) => {

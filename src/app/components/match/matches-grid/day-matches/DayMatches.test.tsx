@@ -22,11 +22,11 @@ jest.mock('../../../../navigation/RootNavigator', () => ({
 }));
 
 import DayMatches from './DayMatches';
-import { ApiService, OnDayMatch } from '@matchinsights/core';
+import { ApiService, OnDayMatch } from 'open-football-project-core';
 import { Routes } from '../../../../navigation/RootNavigator';
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core') as object;
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core') as object;
   return {
     ...actual,
     useCharteableMatchNow: jest.fn(() => ({

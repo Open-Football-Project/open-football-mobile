@@ -22,7 +22,7 @@ jest.mock("../../../navigation/RootNavigator", () => ({
 }));
 
 import ArgSpecialTable from "./ArgSpecialTable";
-import { ArgLeagueEntry } from "@matchinsights/core";
+import { ArgLeagueEntry } from "open-football-project-core";
 
 const mockAnnual: ArgLeagueEntry[] = [
   {
@@ -98,8 +98,8 @@ jest.mock("@react-navigation/native", () => ({
   }),
 }));
 
-jest.mock("@matchinsights/core", () => {
-  const actual = jest.requireActual("@matchinsights/core") as any;
+jest.mock("open-football-project-core", () => {
+  const actual = jest.requireActual("open-football-project-core") as any;
   return {
     ...actual,
   };

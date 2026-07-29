@@ -9,7 +9,7 @@ import {
   TeamPlayer,
   teamLinksToMobileRoutes,
   SubheaderLink,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import SubHeader from '../../../components/general/sub-header/SubHeader';
 import TeamInfo from '../../../components/team/team-details/team-info/TeamInfo';
 import TeamSquad from '../../../components/team/team-details/team-squad/TeamSquad';

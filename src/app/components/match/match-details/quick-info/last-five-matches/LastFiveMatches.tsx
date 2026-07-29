@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { TeamForm } from '@matchinsights/core';
+import { TeamForm } from 'open-football-project-core';
 import NoData from '../../../../general/no-data/NoData';
 import { colors, spacing, fontSize, fontWeight } from '../../../../../theme';
 

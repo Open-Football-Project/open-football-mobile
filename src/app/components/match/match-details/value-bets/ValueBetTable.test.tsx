@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react-native';
 import ValueBetTable from './ValueBetTable';
-import { ValueBetMarket } from '@matchinsights/core';
+import { ValueBetMarket } from 'open-football-project-core';
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({

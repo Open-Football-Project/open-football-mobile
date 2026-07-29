@@ -21,7 +21,7 @@ jest.mock('../../../navigation/RootNavigator', () => ({
 }));
 
 import PlayerHistoryHeader from './PlayerHistoryHeader';
-import { PlayerMainInfo } from '@matchinsights/core';
+import { PlayerMainInfo } from 'open-football-project-core';
 import { Routes } from '../../../navigation/RootNavigator';
 
 const mockNavigate = jest.fn();
@@ -84,8 +84,8 @@ jest.mock('../../../icons/Icons', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core');
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core');
   return {
     ...actual,
     translateCountry: (country: string, t?: any) => {

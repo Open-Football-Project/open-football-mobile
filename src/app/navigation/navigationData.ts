@@ -17,7 +17,7 @@ import colIcon from "../assets/images/col.png";
 import chiIcon from "../assets/images/chi.png";
 import mexIcon from "../assets/images/mex.png";
 import usaIcon from "../assets/images/usa.png";
-import { MobileRoutes } from "@matchinsights/core";
+import { MobileRoutes } from "open-football-project-core";
 
 interface NavDetails {
   title: string;

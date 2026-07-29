@@ -16,7 +16,7 @@ import Matches from '../screens/matches/Matches';
 import PlayerHistoryPage from '../screens/player-history/PlayerHistoryPage';
 import TeamDetailsPage from '../screens/team-details/TeamDetailsPage';
 import TodayPlayersScreen from '../screens/today-players/TodayPlayersScreen';
-import { ApiService, MobileRoutes } from '@matchinsights/core';
+import { ApiService, MobileRoutes } from 'open-football-project-core';
 
 export const Routes = MobileRoutes
 

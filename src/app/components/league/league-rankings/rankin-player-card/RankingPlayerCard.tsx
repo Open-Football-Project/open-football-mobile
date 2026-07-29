@@ -19,7 +19,7 @@ import {
   PlayerSvgLabel,
   PlayerSvgLabels,
   obscurePlayerName,
-} from "@matchinsights/core";
+} from "open-football-project-core";
 import type { RootStackParamList } from "../../../../navigation/RootNavigator";
 import { Routes } from "../../../../navigation/RootNavigator";
 import {

@@ -1,7 +1,7 @@
 import { describe, it, expect, jest } from "@jest/globals";
 import { render, screen } from "@testing-library/react-native";
 import LeagueGroupGrid from "./LeagueGroupGrid";
-import { LeagueGroup } from "@matchinsights/core";
+import { LeagueGroup } from "open-football-project-core";
 
 jest.mock("../grp-card/LeagueGroupCard", () => {
   const React = require("react");

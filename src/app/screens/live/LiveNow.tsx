@@ -22,7 +22,7 @@ import {
   leagueTranslationKey,
   useLiveNowStatus,
   MobileRoutes,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import { RootStackParamList } from '../../navigation/RootNavigator';
 import { colors, spacing, fontSize, fontWeight, borderRadius, borders, breakpoints } from '../../theme';
 

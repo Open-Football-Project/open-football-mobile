@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ViewStyle, TextStyle } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { getFormattedDate, getFormattedTime } from '@matchinsights/core';
+import { getFormattedDate, getFormattedTime } from 'open-football-project-core';
 import { colors, fontSize, fontWeight, spacing } from '../../../theme';
 
 interface StatusOrTimeProps {

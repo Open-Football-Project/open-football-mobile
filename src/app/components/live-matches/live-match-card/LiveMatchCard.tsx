@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
-import { ApiService, LiveMatch, useCharteableMatchNow, useTopGuysAvailable } from '@matchinsights/core';
+import { ApiService, LiveMatch, useCharteableMatchNow, useTopGuysAvailable } from 'open-football-project-core';
 import Logo from '../../general/logo/Logo';
 import MatchButton from '../../general/match-button/MatchButton';
 import ChartButton from '../../general/chart-button/ChartButton';

@@ -10,7 +10,7 @@ import {
   translateCountry,
   translateLeague,
   PlayerTrophyInfo,
-} from '@matchinsights/core';
+} from 'open-football-project-core';
 import NoData from '../../general/no-data/NoData';
 import { TrophyIcon } from '../../../icons/Icons';
 import { colors, spacing, fontSize, fontWeight, borderRadius, breakpoints } from '../../../theme';

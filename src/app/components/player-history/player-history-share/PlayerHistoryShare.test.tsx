@@ -17,8 +17,8 @@ jest.mock('../../general/share-svg-button/ShareSvgButton', () => {
   };
 });
 
-jest.mock('@matchinsights/core', () => {
-  const actual = jest.requireActual('@matchinsights/core') as any;
+jest.mock('open-football-project-core', () => {
+  const actual = jest.requireActual('open-football-project-core') as any;
   return {
     ...actual,
     buildPlayerHistorySvgString: jest.fn()
@@ -50,7 +50,7 @@ jest.mock('react-i18next', () => ({
 }));
 
 import PlayerHistoryShare from './PlayerHistoryShare';
-import { PlayerTransferInfo, PlayerTrophyInfo } from '@matchinsights/core';
+import { PlayerTransferInfo, PlayerTrophyInfo } from 'open-football-project-core';
 
 const mockTransfers: PlayerTransferInfo[] = [
   {
@@ -73,7 +73,7 @@ const mockTrophies: PlayerTrophyInfo[] = [
 
 describe('PlayerHistoryShare', () => {
   beforeEach(() => {
-    const { buildPlayerHistorySvgString } = require('@matchinsights/core');
+    const { buildPlayerHistorySvgString } = require('open-football-project-core');
     jest.clearAllMocks();
     buildPlayerHistorySvgString
       .mockReturnValueOnce('<svg>transfers</svg>')
@@ -118,7 +118,7 @@ describe('PlayerHistoryShare', () => {
   });
 
   it('calls buildPlayerHistorySvgString 3 times with the player name', () => {
-    const { buildPlayerHistorySvgString } = require('@matchinsights/core');
+    const { buildPlayerHistorySvgString } = require('open-football-project-core');
     render(
       <PlayerHistoryShare
         playerName="Lionel Messi"
@@ -140,7 +140,7 @@ describe('PlayerHistoryShare', () => {
   });
 
   it('calls buildPlayerHistorySvgString once per strategy', () => {
-    const { buildPlayerHistorySvgString } = require('@matchinsights/core');
+    const { buildPlayerHistorySvgString } = require('open-football-project-core');
     render(
       <PlayerHistoryShare
         playerName="Lionel Messi"

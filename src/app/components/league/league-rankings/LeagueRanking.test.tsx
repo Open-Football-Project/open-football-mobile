@@ -1,7 +1,7 @@
 import { describe, it, expect, jest } from '@jest/globals';
 import { render, screen } from '@testing-library/react-native';
 import LeagueRanking from './LeagueRanking';
-import { LeagueRankingPlayer } from '@matchinsights/core';
+import { LeagueRankingPlayer } from 'open-football-project-core';
 
 // Mock RankingPlayerCard
 jest.mock('./rankin-player-card/RankingPlayerCard', () => {
