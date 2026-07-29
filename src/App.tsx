@@ -8,7 +8,7 @@ import { useApiService } from 'open-football-project-core';
 
 const queryClient = new QueryClient();
 
-const API_HOST="https://futballero.com";
+const API_HOST="https://footballproject.org";
 
 export default function App() {
   const apiService = useApiService(API_HOST, false);

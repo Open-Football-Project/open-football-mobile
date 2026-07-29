@@ -55,12 +55,12 @@ describe('App', () => {
 
   it('constructs apiService via useApiService with the production API host', () => {
     render(<App />);
-    expect(mockUseApiService).toHaveBeenCalledWith('https://futballero.com', false);
+    expect(mockUseApiService).toHaveBeenCalledWith('https://footballproject.org', false);
   });
 
   it('passes apiService and the production apiHost down to AppLayout', () => {
     render(<App />);
     expect(screen.getByTestId('app-layout-api-service')).toHaveTextContent('has-api-service');
-    expect(screen.getByTestId('app-layout-api-host')).toHaveTextContent('https://futballero.com');
+    expect(screen.getByTestId('app-layout-api-host')).toHaveTextContent('https://footballproject.org');
   });
 });
