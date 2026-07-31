@@ -1,4 +1,4 @@
-name: Release Android
+name: Prepare Android Release
 
 on:
   workflow_dispatch:
@@ -9,38 +9,18 @@ on:
         type: string
 
 jobs:
-  release:
-    name: Build & Publish to Play Store
+  prepare:
+    name: Bump version and open release PR
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
         with:
-          node-version: "22"
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "17"
-
-      - name: Cache Gradle
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: gradle-${{ hashFiles('android/**/*.gradle*', 'android/gradle/wrapper/gradle-wrapper.properties') }}
-          restore-keys: gradle-
+          ref: main
 
       - name: Bump versionCode and versionName
         id: version
@@ -61,26 +41,6 @@ jobs:
           echo "version_code=$NEW_CODE" >> $GITHUB_OUTPUT
           echo "version_name=${{ github.event.inputs.version_name }}" >> $GITHUB_OUTPUT
 
-      - name: Decode keystore
-        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/futballero.keystore
-
-      - name: Build release AAB
-        working-directory: android
-        env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: ./gradlew bundleRelease --no-daemon
-
-      - name: Upload to Play Store (internal track)
-        uses: r0adkll/upload-google-play@v1
-        with:
-          serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
-          packageName: com.futballero
-          releaseFiles: android/app/build/outputs/bundle/release/app-release.aab
-          track: internal
-          status: draft
-
       - name: Commit version bump
         run: |
           git config user.name "github-actions[bot]"
@@ -90,3 +50,13 @@ jobs:
           git add android/app/build.gradle
           git commit -m "chore: bump android version to ${{ steps.version.outputs.version_name }} (build ${{ steps.version.outputs.version_code }})"
           git push -u origin "$BRANCH"
+
+      - name: Open release PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create \
+            --base main \
+            --head "release/android-v${{ steps.version.outputs.version_name }}" \
+            --title "Release Android v${{ steps.version.outputs.version_name }} (build ${{ steps.version.outputs.version_code }})" \
+            --body "Bumps versionName to ${{ steps.version.outputs.version_name }} and versionCode to ${{ steps.version.outputs.version_code }}. Merging this PR triggers the Publish Android Release workflow, which builds and uploads the AAB to the Play Store internal track."
