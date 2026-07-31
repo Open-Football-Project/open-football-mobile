@@ -85,6 +85,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="release/android-v${{ steps.version.outputs.version_name }}"
+          git checkout -b "$BRANCH"
           git add android/app/build.gradle
           git commit -m "chore: bump android version to ${{ steps.version.outputs.version_name }} (build ${{ steps.version.outputs.version_code }})"
-          git push
+          git push -u origin "$BRANCH"
