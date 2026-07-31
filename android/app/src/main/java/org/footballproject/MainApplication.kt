@@ -1,4 +1,4 @@
-package com.futballero
+package org.footballproject
 
 import android.app.Application
 import com.facebook.react.PackageList

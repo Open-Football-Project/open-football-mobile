@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.futballero"
+    namespace "org.footballproject"
     defaultConfig {
-        applicationId "com.futballero"
+        applicationId "org.footballproject"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 18
@@ -93,7 +93,7 @@ android {
             keyPassword 'android'
         }
         release {
-            storeFile file(System.getenv("KEYSTORE_PATH") ?: "../futballero.keystore")
+            storeFile file(System.getenv("KEYSTORE_PATH") ?: "../org.footballproject.keystore")
             storePassword System.getenv("KEYSTORE_PASSWORD") ?: ""
             keyAlias System.getenv("KEY_ALIAS") ?: ""
             keyPassword System.getenv("KEY_PASSWORD") ?: ""
