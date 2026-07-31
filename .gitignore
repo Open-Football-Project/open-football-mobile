@@ -81,4 +81,4 @@ jest-stare/
 # Env files
 .env
 .env.*
-android/futballero.keystore
+android/org.footballproject.keystore

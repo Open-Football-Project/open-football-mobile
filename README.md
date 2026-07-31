@@ -91,19 +91,19 @@ The registered app name (from `app.json`) is:
 
 ```json
 {
-  "name": "Futballero",
+  "name": "OpenFootballProject",
   "displayName": "Open Football Project"
 }
 ```
 
 On Android, the Java package will be defined in `android/app/src/main/AndroidManifest.xml`.  
-Assuming it is `com.futballero`, you can start the app with:
+Assuming it is `org.footballproject`, you can start the app with:
 
 ```bash
-adb shell monkey -p com.futballero -c android.intent.category.LAUNCHER 1
+adb shell monkey -p org.footballproject -c android.intent.category.LAUNCHER 1
 ```
 
-> If your package name is different, replace `com.futballero` with the actual package from the manifest.
+> If your package name is different, replace `org.footballproject` with the actual package from the manifest.
 
 ### 6. Enable fast refresh (hot reloading)
 

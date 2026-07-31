@@ -70,7 +70,7 @@ Then start Metro:
 npm start
 ```
 
-Open the **Futballero** app from the app drawer on your phone. It will connect to Metro for the JS bundle.
+Open the **Open Football Project** app from the app drawer on your phone. It will connect to Metro for the JS bundle.
 
 ### 4. Dev Menu and Fast Refresh on device
 
