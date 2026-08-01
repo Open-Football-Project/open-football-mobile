@@ -83,4 +83,19 @@ describe('AppHeader', () => {
       expect.objectContaining({ paddingTop: 0 })
     );
   });
+
+  it('shows the TribuGOL brand name with a small byline crediting Open Football Project when Spanish is selected', () => {
+    (useTranslation as jest.Mock).mockReturnValue({
+      i18n: { language: 'es', changeLanguage },
+    });
+    render(<AppHeader onMenuPress={onMenuPress} />);
+    expect(screen.getByText('TribuGOL')).toBeTruthy();
+    expect(screen.getByText('by Open Football Project')).toBeTruthy();
+  });
+
+  it('shows Open Football Project with no byline when English is selected', () => {
+    render(<AppHeader onMenuPress={onMenuPress} />);
+    expect(screen.getByText('Open Football Project')).toBeTruthy();
+    expect(screen.queryByText('by Open Football Project')).toBeNull();
+  });
 });
