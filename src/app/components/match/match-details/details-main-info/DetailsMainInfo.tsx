@@ -277,27 +277,19 @@ export const DetailsMainInfo = ({
             </Text>
           </View>
 
-          {isLiveNow ? (
-            <View testID="live-button-container">
-              <MatchButton isLiveNow={isLiveNow} fixtureId={fixtureId} />
-            </View>
-          ) : (
+          {!isLiveNow && (
             <Text style={styles.matchStatus} testID="match-status">
               {t(`matchstatuslong.${matchLongStatusToKey(statusLong)}`, {
                 defaultValue: statusLong,
               })}
             </Text>
           )}
-
-          {(isCharteableMatchNow || isTopGuysAvailable) && (
-            <View style={styles.entryPointsRow}>
-              {isCharteableMatchNow && <ChartButton fixtureId={fixtureId} />}
-              {isTopGuysAvailable && <TopGuysButton fixtureId={fixtureId} />}
-            </View>
-          )}
         </View>
 
-        <View style={styles.shareButtonContainer}>
+        <View style={styles.actionButtonsRow}>
+          {isLiveNow && <MatchButton isLiveNow={isLiveNow} fixtureId={fixtureId} />}
+          {isCharteableMatchNow && <ChartButton fixtureId={fixtureId} />}
+          {isTopGuysAvailable && <TopGuysButton fixtureId={fixtureId} />}
           <ShareSvgButton svgString={svgString} />
         </View>
       </View>
@@ -320,14 +312,18 @@ const styles = StyleSheet.create({
     gap: spacing.sm,
   },
 
-  shareButtonContainer: {
+  actionButtonsRow: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: spacing.xs,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
     borderTopWidth: borders.thin,
     borderTopColor: colors.secondary.dark,
     borderBottomWidth: borders.thin,
     borderBottomColor: colors.secondary.dark,
-    alignItems: "flex-end",
   },
 
   teamColumn: {
@@ -426,12 +422,5 @@ const styles = StyleSheet.create({
     color: colors.brand.orange,
     fontWeight: fontWeight.semibold,
     textAlign: "center",
-  },
-
-  entryPointsRow: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: spacing.xs,
   },
 });

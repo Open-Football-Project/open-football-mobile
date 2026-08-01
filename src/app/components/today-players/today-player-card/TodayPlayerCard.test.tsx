@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react-native';
+import { render, screen, fireEvent } from '@testing-library/react-native';
 import { TodayPlayerScore } from 'open-football-project-core';
 
 import TodayPlayerCard from './TodayPlayerCard';
@@ -12,6 +12,19 @@ jest.mock('open-football-project-core', () => ({
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key: string, options?: any) => options?.defaultValue ?? key,
+  }),
+}));
+
+jest.mock('../../../navigation/RootNavigator', () => ({
+  Routes: {
+    PLAYER_HISTORY: 'player_history',
+  },
+}));
+
+const mockNavigate = jest.fn();
+jest.mock('@react-navigation/native', () => ({
+  useNavigation: () => ({
+    navigate: mockNavigate,
   }),
 }));
 
@@ -162,5 +175,24 @@ describe('TodayPlayerCard', () => {
     render(<TodayPlayerCard playerScore={playerScore} teamName="Argentina" />);
 
     expect(screen.getByTestId('today-player-info-column')).toHaveStyle({ flex: 1 });
+  });
+
+  it('navigates to the player history screen when the View Player button is pressed', () => {
+    render(<TodayPlayerCard playerScore={playerScore} teamName="Argentina" />);
+
+    fireEvent.press(screen.getByTestId('today-player-view-button'));
+
+    expect(mockNavigate).toHaveBeenCalledWith('player_history', { playerId: '154' });
+  });
+
+  it('does not render the View Player button when the player has no id', () => {
+    render(
+      <TodayPlayerCard
+        playerScore={{ ...playerScore, player: { ...playerScore.player, id: null } }}
+        teamName="Argentina"
+      />,
+    );
+
+    expect(screen.queryByTestId('today-player-view-button')).toBeNull();
   });
 });

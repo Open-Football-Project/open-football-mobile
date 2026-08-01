@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, Image, StyleSheet, useWindowDimensions } from 'react-native';
+import { View, Text, Image, Pressable, StyleSheet, useWindowDimensions } from 'react-native';
 import { useTranslation } from 'react-i18next';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import {
   MarketOddsReason,
   SeasonFormReason,
@@ -9,6 +11,9 @@ import {
 } from 'open-football-project-core';
 
 import { colors, spacing, fontSize, fontWeight, borderRadius, breakpoints } from '../../../theme';
+import type { RootStackParamList } from '../../../navigation/RootNavigator';
+import { Routes } from '../../../navigation/RootNavigator';
+import { ChevronRightIcon } from '../../../icons/Icons';
 
 interface TodayPlayerCardProps {
   playerScore: TodayPlayerScore;
@@ -18,6 +23,8 @@ interface TodayPlayerCardProps {
 const MAX_MARKETS_SHOWN = 2;
 
 const defaultPlayerImage = require('../../../assets/images/player.png');
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
 const tKey = (text: string): string =>
   text
@@ -31,10 +38,15 @@ const tKey = (text: string): string =>
 
 const TodayPlayerCard = ({ playerScore, teamName }: TodayPlayerCardProps) => {
   const { t } = useTranslation();
+  const navigation = useNavigation<NavigationProp>();
   const { width } = useWindowDimensions();
   const isTablet = width >= breakpoints.tablet;
   const [imageError, setImageError] = useState(false);
   const { player, score, signal, reason } = playerScore;
+
+  const handleViewPlayer = () => {
+    navigation.navigate(Routes.PLAYER_HISTORY, { playerId: String(player.id) });
+  };
 
   const isOddsImplied = signal === 'ODDS_IMPLIED';
 
@@ -83,6 +95,17 @@ const TodayPlayerCard = ({ playerScore, teamName }: TodayPlayerCardProps) => {
         { flexDirection: isTablet ? 'row' : 'column', alignItems: isTablet ? 'flex-start' : 'center' },
       ]}
     >
+      {player.id != null && (
+        <Pressable
+          testID="today-player-view-button"
+          onPress={handleViewPlayer}
+          accessibilityRole="button"
+          accessibilityLabel={t('accessibility.view_player', { defaultValue: 'View player details' })}
+          style={({ pressed }) => [styles.viewButton, pressed && styles.viewButtonPressed]}
+        >
+          <ChevronRightIcon size={fontSize.sm} color={colors.text.darker} />
+        </Pressable>
+      )}
       <View style={styles.photoColumn}>
         <Image
           testID="today-player-image"
@@ -143,6 +166,7 @@ const TodayPlayerCard = ({ playerScore, teamName }: TodayPlayerCardProps) => {
 
 const styles = StyleSheet.create({
   card: {
+    position: 'relative',
     width: '100%',
     gap: spacing.md,
     backgroundColor: colors.background.card,
@@ -170,6 +194,21 @@ const styles = StyleSheet.create({
     fontSize: fontSize.xs,
     color: colors.text.primary,
     textAlign: 'center',
+  },
+  viewButton: {
+    position: 'absolute',
+    top: spacing.xs,
+    right: spacing.xs,
+    zIndex: 1,
+    width: 24,
+    height: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: borderRadius.full,
+    backgroundColor: colors.brand.aqualight,
+  },
+  viewButtonPressed: {
+    opacity: 0.7,
   },
   infoColumn: {
     flex: 1,
