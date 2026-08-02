@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.xxl,
+    backgroundColor: colors.background.dark,
   },
   heading: {
     ...textStyles.h2,
