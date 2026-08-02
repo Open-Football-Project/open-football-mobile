@@ -43,6 +43,11 @@ jobs:
       - name: Decode keystore
         run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/futballero.keystore
 
+      - name: Write .env
+        run: |
+          echo "API_HOST=${{ secrets.API_HOST }}" >> .env
+          echo "BTC_ADDRESS=${{ secrets.BTC_ADDRESS }}" >> .env
+
       - name: Build release AAB
         working-directory: android
         env:
