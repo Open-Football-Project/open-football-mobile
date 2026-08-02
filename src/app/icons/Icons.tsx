@@ -14,6 +14,7 @@ import {
   Clock,
   Award,
   Globe,
+  Copy,
 } from 'react-native-feather';
 import { colors } from '../theme/colors';
 import { fontSize, fontWeight } from '../theme/typography';
@@ -35,6 +36,12 @@ export const CloseIcon = ({
   color = colors.white,
   testID = 'close-icon',
 }: IconProps) => <X size={size} color={color} testID={testID} />;
+
+export const CopyIcon = ({
+  size = fontSize.base,
+  color = colors.text.primary,
+  testID = 'copy-icon',
+}: IconProps) => <Copy size={size} color={color} testID={testID} />;
 
 export const ArrowUpIcon = ({
   size = fontSize.sm,

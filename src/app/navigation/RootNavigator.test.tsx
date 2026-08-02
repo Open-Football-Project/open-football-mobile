@@ -172,6 +172,17 @@ jest.mock('../screens/team-details/TeamDetailsPage', () => {
   };
 });
 
+jest.mock('../screens/support-us/SupportUsScreen', () => {
+  const { Text, View } = require('react-native');
+  return function SupportUsScreen() {
+    return (
+      <View testID="support-us-screen">
+        <Text>Support Us</Text>
+      </View>
+    );
+  };
+}, { virtual: true });
+
 // Mock apiService
 const mockApiService = {
   getFixtures: jest.fn(),
@@ -257,9 +268,23 @@ describe('RootNavigator', () => {
       expect(allRoutes).toContain('match-details');
       expect(allRoutes).toContain('matches');
       expect(allRoutes).toContain('player-history');
+      expect(allRoutes).toContain('support-us');
       expect(allRoutes).toContain('team-details');
       expect(allRoutes).toContain('charts');
       expect(allRoutes).toContain('today-players');
+    });
+
+    it('renders SupportUsScreen under the SUPPORT_US route', () => {
+      render(
+        <NavigationContainer
+          initialState={{
+            routes: [{ name: MobileRoutes.SUPPORT_US }],
+          }}
+        >
+          <RootNavigator apiService={mockApiService} apiHost={testApiHost} />
+        </NavigationContainer>
+      );
+      expect(screen.getByTestId('support-us-screen')).toBeTruthy();
     });
 
     it('renders LiveChartsScreen under the CHARTS route', () => {

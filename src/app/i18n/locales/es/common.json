@@ -10,7 +10,18 @@
     "today_players": "Jugadores de Hoy",
     "matches": "Partidos",
     "leagues": "Ligas",
-    "about": "Información"
+    "about": "Información",
+    "support_us": "Apóyanos"
+  },
+  "supportus": {
+    "head": "Apoyá a Open Football Project",
+    "text": "Open Football Project es gratis e independiente. Si te resulta útil, una donación en Bitcoin ayuda a cubrir sus costos de funcionamiento. Cualquier aporte se agradece.",
+    "addressLabel": "Dirección de Bitcoin para donaciones",
+    "copyButton": "Copiar dirección de Bitcoin",
+    "copySuccessTitle": "Copiado",
+    "copySuccessMessage": "Dirección de Bitcoin copiada al portapapeles.",
+    "copyErrorTitle": "Error al copiar",
+    "copyErrorMessage": "No se pudo copiar la dirección de Bitcoin. Intentalo de nuevo."
   },
   "navigationTitles": {
     "mainmenu": "Menú principal",

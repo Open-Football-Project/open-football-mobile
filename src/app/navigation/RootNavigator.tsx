@@ -14,6 +14,7 @@ import LiveNow from '../screens/live/LiveNow';
 import MatchDetail from '../screens/match-details/MatchDetail';
 import Matches from '../screens/matches/Matches';
 import PlayerHistoryPage from '../screens/player-history/PlayerHistoryPage';
+import SupportUsScreen from '../screens/support-us/SupportUsScreen';
 import TeamDetailsPage from '../screens/team-details/TeamDetailsPage';
 import TodayPlayersScreen from '../screens/today-players/TodayPlayersScreen';
 import { ApiService, MobileRoutes } from 'open-football-project-core';
@@ -34,6 +35,7 @@ export type RootStackParamList = {
   [MobileRoutes.MATCH_DETAILS]: { matchId: string };
   [MobileRoutes.MATCHES]: undefined;
   [MobileRoutes.PLAYER_HISTORY]: { playerId: string };
+  [MobileRoutes.SUPPORT_US]: undefined;
   [MobileRoutes.TEAM_DETAILS]: { teamId: string };
   [MobileRoutes.TODAY_PLAYERS]: { fixtureId?: string };
 };
@@ -175,6 +177,11 @@ export function RootNavigator({ apiService, apiHost }: RootNavigatorProps) {
       <Stack.Screen
         name={Routes.PLAYER_HISTORY}
         component={PlayerHistoryPageComponent}
+      />
+
+      <Stack.Screen
+        name={Routes.SUPPORT_US}
+        component={SupportUsScreen}
       />
 
       <Stack.Screen

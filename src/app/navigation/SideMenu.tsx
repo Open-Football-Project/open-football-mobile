@@ -62,6 +62,18 @@ const SideMenu = ({ visible, onClose }: Props) => {
         >
           <CloseIcon size={fontSize.xl} testID="side-menu-close-icon" />
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.supportUsButton}
+          onPress={() => handleNavigate(MobileRoutes.SUPPORT_US)}
+          activeOpacity={0.7}
+          testID="support-us-nav-button"
+          accessibilityLabel={t('navbar.support_us')}
+          accessibilityRole="button"
+        >
+          <Text style={styles.supportUsText}>{t('navbar.support_us')}</Text>
+        </TouchableOpacity>
+
       {navigationData.map((section) => {
         const isOpen = openLiga === section.name;
 
@@ -134,6 +146,20 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background.dark,
     paddingHorizontal: spacing.lg,
     paddingTop: spacing.sm,
+  },
+  supportUsButton: {
+    backgroundColor: colors.brand.orange,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    marginTop: spacing.xs,
+    borderRadius: borderRadius.xs,
+    alignItems: 'center',
+  },
+  supportUsText: {
+    color: colors.text.darker,
+    fontSize: fontSize.xs,
+    fontWeight: fontWeight.medium,
+    textTransform: 'uppercase',
   },
   sectionButton: {
     backgroundColor: colors.overlay.royalblueMid25,
