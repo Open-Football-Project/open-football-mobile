@@ -236,7 +236,7 @@ const LiveChartsScreen = ({
               {t('charts.mode_indicators', { defaultValue: 'Indicators' })}
             </Text>
           </Pressable>
-          {mode === ChartsScreenMode.Odds && (
+          {mode === ChartsScreenMode.Odds && !isOddsNotAvailable && (
             <Pressable
               testID="odds-market-menu-toggle"
               accessibilityRole="button"
@@ -249,13 +249,15 @@ const LiveChartsScreen = ({
             </Pressable>
           )}
         </View>
-        <Controls
-          useDrop0
-          drop0Label={t('charts.pick_match', { defaultValue: 'Select match' })}
-          selectedDrop0={selectedDrop0}
-          setDrop0={setDrop0}
-          drop0Options={matchDropOptions}
-        />
+        {matchDropOptions.length > 0 && (
+          <Controls
+            useDrop0
+            drop0Label={t('charts.pick_match', { defaultValue: 'Select match' })}
+            selectedDrop0={selectedDrop0}
+            setDrop0={setDrop0}
+            drop0Options={matchDropOptions}
+          />
+        )}
         {renderContent()}
       </ScrollView>
       {mode === ChartsScreenMode.Odds && isMarketMenuOpen && (

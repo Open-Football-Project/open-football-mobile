@@ -487,6 +487,32 @@ describe('LiveChartsScreen', () => {
     expect(screen.queryByTestId('panel-3')).toBeNull();
   });
 
+  it('does not render the match dropdown when there are no options for the current mode', () => {
+    mockUseChartsPageStatus.mockReturnValue({ ...baseStatus, chartMatches: [] });
+    mockUseCharteableOddsStatus.mockReturnValue({
+      ...baseOddsStatus,
+      oddsMatches,
+      isOddsNotAvailable: false,
+    });
+    render(<LiveChartsScreen apiService={mockApiService} apiHost={testApiHost} />);
+
+    expect(screen.getByTestId('controls')).toBeTruthy();
+
+    fireEvent.press(screen.getByTestId('mode-toggle-indicators'));
+
+    expect(screen.queryByTestId('controls')).toBeNull();
+  });
+
+  it('does not show the market menu toggle when odds data is not available, even in Odds mode', () => {
+    mockUseChartsPageStatus.mockReturnValue({ ...baseStatus, chartMatches: matches });
+    mockUseCharteableOddsStatus.mockReturnValue({ ...baseOddsStatus, isOddsNotAvailable: true });
+    render(<LiveChartsScreen apiService={mockApiService} apiHost={testApiHost} />);
+
+    fireEvent.press(screen.getByTestId('mode-toggle-odds'));
+
+    expect(screen.queryByTestId('odds-market-menu-toggle')).toBeNull();
+  });
+
   it('resets the enabled markets to the default set when the effective odds fixture changes', () => {
     renderInOddsModeWithMarkets();
     fireEvent.press(screen.getByTestId('odds-market-menu-toggle'));
