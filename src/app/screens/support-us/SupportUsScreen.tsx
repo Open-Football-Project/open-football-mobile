@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, StyleSheet, Text } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import Config from 'react-native-config';
 import Clipboard from '@react-native-clipboard/clipboard';
