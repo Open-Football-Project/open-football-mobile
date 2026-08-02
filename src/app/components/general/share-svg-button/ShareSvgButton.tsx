@@ -19,6 +19,7 @@ import {
   borderRadius,
   opacity,
   sizes,
+  shadows,
 } from "../../../theme";
 
 interface ShareSvgButtonProps {
@@ -115,11 +116,12 @@ const styles = StyleSheet.create({
   shareButton: {
     minWidth: sizes.matchButtonMinWidth,
     backgroundColor: colors.brand.yellow,
-    paddingHorizontal: spacing.sm,
+    paddingHorizontal: spacing.xs,
     paddingVertical: spacing.xs,
     borderRadius: borderRadius.sm,
     justifyContent: "center",
     alignItems: "center",
+    ...shadows.md,
   } as ViewStyle,
   shareButtonPressed: {
     opacity: opacity.hover,

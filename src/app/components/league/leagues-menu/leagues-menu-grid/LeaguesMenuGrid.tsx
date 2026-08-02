@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    gap: spacing.xs,
 
     borderWidth: borders.hairline,
     borderColor: colors.brand.purple,

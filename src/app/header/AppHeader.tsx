@@ -19,6 +19,9 @@ interface AppHeaderProps {
 const AppHeader: React.FC<AppHeaderProps> = ({ onMenuPress }) => {
   const { i18n } = useTranslation();
   const insets = useSafeAreaInsets();
+  const isSpanish = i18n.language.includes('es');
+  const brandName = isSpanish ? 'TribuGOL' : 'Open Football Project';
+  const byParentProject = 'by Open Football Project';
 
   return (
     <View
@@ -34,6 +37,11 @@ const AppHeader: React.FC<AppHeaderProps> = ({ onMenuPress }) => {
       >
         <HamburgerIcon color={colors.text.primary} />
       </TouchableOpacity>
+
+      <View style={styles.brandContainer}>
+        <Text style={styles.brandText}>{brandName}</Text>
+        {isSpanish && <Text style={styles.brandByline}>{byParentProject}</Text>}
+      </View>
 
       <View style={styles.languageContainer}>
         <TouchableOpacity
@@ -83,6 +91,20 @@ const styles = StyleSheet.create({
     fontSize: fontSize.xxl,
     color: colors.text.primary,
     fontWeight: fontWeight.bold,
+  },
+  brandContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  brandText: {
+    fontSize: fontSize.sm,
+    fontWeight: fontWeight.bold,
+    color: colors.text.primary,
+  },
+  brandByline: {
+    fontSize: fontSize.xxs,
+    fontWeight: fontWeight.medium,
+    color: colors.text.secondary,
   },
   languageContainer: {
     flexDirection: 'row',

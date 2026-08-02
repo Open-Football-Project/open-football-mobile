@@ -9,7 +9,7 @@ import { useRoute } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
 import SubHeader from '../../../components/general/sub-header/SubHeader';
 import NoData from '../../../components/general/no-data/NoData';
-import KnockoutStepper from '../../../components/league/knockout/stepper/KnockoutStepper';
+import KnockoutBracketSection from '../../../components/league/knockout/bracket-tree/KnockoutBracketSection';
 
 import {
   ApiService,
@@ -148,7 +148,7 @@ const LeagueKnockoutPage = ({ apiService }: LeagueKnockoutPageProps) => {
     >
       <View style={[styles.contentWrapper, { maxWidth: getContentMaxWidth(), padding: getContainerPadding(), gap: getGapSize() }]}>
         {renderSubHeader()}
-        <KnockoutStepper fixtures={fixtures!} />
+        <KnockoutBracketSection fixtures={fixtures!} />
       </View>
     </ScrollView>
   );

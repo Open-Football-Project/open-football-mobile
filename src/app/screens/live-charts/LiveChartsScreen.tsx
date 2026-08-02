@@ -22,6 +22,11 @@ import Panels from '../../components/live-charts/panels/Panels';
 import { marketToPanel } from '../../components/live-charts/panels/odds/market-to-panel';
 import OddsMarketMenu from '../../components/live-charts/panels/odds/OddsMarketMenu';
 import { colors, spacing, fontSize, fontWeight, borderRadius } from '../../theme';
+import {
+  getLiveFixturesIdsSet,
+  solveIndicatorMatchesDropList,
+  solveOddsMatchesDropList,
+} from './utils/charts-dropdown';
 
 enum ChartsScreenMode {
   Odds = 'odds',
@@ -144,13 +149,11 @@ const LiveChartsScreen = ({
     );
   }
 
-  const toMatchDropOption = (match: { fixtureId: number; homeTeamName: string; awayTeamName: string }) => ({
-    id: String(match.fixtureId),
-    value: `${match.homeTeamName} vs ${match.awayTeamName}`,
-  });
-
+  const liveFixtureIds = getLiveFixturesIdsSet(chartMatches, new Date());
   const matchDropOptions =
-    mode === ChartsScreenMode.Odds ? oddsMatches.map(toMatchDropOption) : chartMatches.map(toMatchDropOption);
+    mode === ChartsScreenMode.Odds
+      ? solveOddsMatchesDropList(liveFixtureIds, oddsMatches)
+      : solveIndicatorMatchesDropList(liveFixtureIds, chartMatches);
 
   const selectedDrop0 = String(
     mode === ChartsScreenMode.Odds ? oddsEffectiveFixtureId : effectiveFixtureId,
@@ -233,7 +236,7 @@ const LiveChartsScreen = ({
               {t('charts.mode_indicators', { defaultValue: 'Indicators' })}
             </Text>
           </Pressable>
-          {mode === ChartsScreenMode.Odds && (
+          {mode === ChartsScreenMode.Odds && !isOddsNotAvailable && (
             <Pressable
               testID="odds-market-menu-toggle"
               accessibilityRole="button"
@@ -246,13 +249,15 @@ const LiveChartsScreen = ({
             </Pressable>
           )}
         </View>
-        <Controls
-          useDrop0
-          drop0Label={t('charts.pick_match', { defaultValue: 'Select match' })}
-          selectedDrop0={selectedDrop0}
-          setDrop0={setDrop0}
-          drop0Options={matchDropOptions}
-        />
+        {matchDropOptions.length > 0 && (
+          <Controls
+            useDrop0
+            drop0Label={t('charts.pick_match', { defaultValue: 'Select match' })}
+            selectedDrop0={selectedDrop0}
+            setDrop0={setDrop0}
+            drop0Options={matchDropOptions}
+          />
+        )}
         {renderContent()}
       </ScrollView>
       {mode === ChartsScreenMode.Odds && isMarketMenuOpen && (

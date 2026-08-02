@@ -27,6 +27,7 @@ jest.mock('open-football-project-core', () => ({
   cleanLeagueName: jest.fn((name) => name),
   leagueTranslationKey: jest.fn((name) => name.toLowerCase().replace(/\s+/g, '_')),
   leagueLinksToMobileRoutes: jest.fn((links) => links),
+  useLeagueFixtureBinaryTree: jest.fn(() => null),
 }));
 
 jest.mock('react-i18next', () => ({
@@ -36,11 +37,11 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
-jest.mock('../../../components/league/knockout/stepper/KnockoutStepper', () => {
+jest.mock('../../../components/league/knockout/bracket-tree/KnockoutBracketSection', () => {
   const { View } = require('react-native');
   return {
     __esModule: true,
-    default: () => <View testID="knockout-stepper" />,
+    default: () => <View testID="knockout-bracket-tree" />,
   };
 });
 
@@ -192,7 +193,7 @@ describe('LeagueKnockoutPage', () => {
     });
   });
 
-  it('renders KnockoutStepper directly when knockout rounds exist', async () => {
+  it('renders KnockoutBracketSection directly when knockout rounds exist', async () => {
     mockUseLeaguePage({
       hasKnockoutPhase: true,
       isLeaguefixturesAvailable: true,
@@ -209,13 +210,13 @@ describe('LeagueKnockoutPage', () => {
     renderPage('123');
 
     await waitFor(() => {
-      expect(screen.getByTestId('knockout-stepper')).toBeOnTheScreen();
+      expect(screen.getByTestId('knockout-bracket-tree')).toBeOnTheScreen();
       expect(screen.queryByTestId('knockout-bracket-image')).not.toBeOnTheScreen();
       expect(screen.queryByTestId('knockout-tabs')).not.toBeOnTheScreen();
     });
   });
 
-  it('renders KnockoutStepper without tabs when knockout rounds exist', async () => {
+  it('renders KnockoutBracketSection without tabs when knockout rounds exist', async () => {
     mockUseLeaguePage({
       hasKnockoutPhase: true,
       isLeaguefixturesAvailable: true,
@@ -250,13 +251,13 @@ describe('LeagueKnockoutPage', () => {
     renderPage('123');
 
     await waitFor(() => {
-      expect(screen.getByTestId('knockout-stepper')).toBeOnTheScreen();
+      expect(screen.getByTestId('knockout-bracket-tree')).toBeOnTheScreen();
       expect(screen.queryByTestId('knockout-bracket-image')).not.toBeOnTheScreen();
       expect(screen.queryByTestId('knockout-tabs')).not.toBeOnTheScreen();
     });
   });
 
-  it('does not render KnockoutStepper while loading', async () => {
+  it('does not render KnockoutBracketSection while loading', async () => {
     mockUseLeaguePage({
       loadingFixtures: true,
     });
@@ -265,11 +266,11 @@ describe('LeagueKnockoutPage', () => {
 
     await waitFor(() => {
       expect(screen.getByTestId('loading')).toBeOnTheScreen();
-      expect(screen.queryByTestId('knockout-stepper')).not.toBeOnTheScreen();
+      expect(screen.queryByTestId('knockout-bracket-tree')).not.toBeOnTheScreen();
     });
   });
 
-  it('does not render KnockoutStepper when fixtures are unavailable', async () => {
+  it('does not render KnockoutBracketSection when fixtures are unavailable', async () => {
     mockUseLeaguePage({
       isLeaguefixturesAvailable: false,
     });
@@ -278,7 +279,7 @@ describe('LeagueKnockoutPage', () => {
 
     await waitFor(() => {
       expect(screen.getByTestId('no-data')).toBeOnTheScreen();
-      expect(screen.queryByTestId('knockout-stepper')).not.toBeOnTheScreen();
+      expect(screen.queryByTestId('knockout-bracket-tree')).not.toBeOnTheScreen();
     });
   });
 
