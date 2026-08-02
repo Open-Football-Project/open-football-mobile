@@ -21,5 +21,7 @@ module.exports = {
   moduleNameMapper: {
     'react-native-view-shot': '<rootDir>/__mocks__/react-native-view-shot.js',
     'react-native-share': '<rootDir>/__mocks__/react-native-share.js',
+    'react-native-config': '<rootDir>/__mocks__/react-native-config.js',
+    '@react-native-clipboard/clipboard': '<rootDir>/node_modules/@react-native-clipboard/clipboard/jest/clipboard-mock.js',
   },
 };

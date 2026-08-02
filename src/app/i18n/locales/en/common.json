@@ -10,7 +10,20 @@
     "today_players": "Today's Players",
     "matches": "Matches",
     "leagues": "Leagues",
-    "about": "About"
+    "about": "About",
+    "support_us": "Support Us"
+  },
+  "supportus": {
+    "head": "Support Open Football Project",
+    "text": "Open Football Project is free and independent. If you find it useful, consider making a Bitcoin donation to help cover its running costs. Every contribution is appreciated.",
+    "addressLabel": "Bitcoin donation address",
+    "copyButton": "Copy Bitcoin address",
+    "copySuccessTitle": "Copied",
+    "copySuccessMessage": "Bitcoin address copied to clipboard.",
+    "copyErrorTitle": "Copy failed",
+    "copyErrorMessage": "Could not copy the Bitcoin address. Please try again.",
+    "showQrCode": "Show QR code",
+    "hideQrCode": "Hide QR code"
   },
   "navigationTitles": {
     "mainmenu": "App Navigation",

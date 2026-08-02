@@ -53,14 +53,14 @@ describe('App', () => {
     mockUseApiService.mockReturnValue({} as any);
   });
 
-  it('constructs apiService via useApiService with the production API host', () => {
+  it('constructs apiService via useApiService with the configured API host', () => {
     render(<App />);
-    expect(mockUseApiService).toHaveBeenCalledWith('https://footballproject.org', false);
+    expect(mockUseApiService).toHaveBeenCalledWith('https://mock-api-host.example', false);
   });
 
-  it('passes apiService and the production apiHost down to AppLayout', () => {
+  it('passes apiService and the configured apiHost down to AppLayout', () => {
     render(<App />);
     expect(screen.getByTestId('app-layout-api-service')).toHaveTextContent('has-api-service');
-    expect(screen.getByTestId('app-layout-api-host')).toHaveTextContent('https://footballproject.org');
+    expect(screen.getByTestId('app-layout-api-host')).toHaveTextContent('https://mock-api-host.example');
   });
 });

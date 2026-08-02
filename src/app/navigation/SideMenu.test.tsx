@@ -55,6 +55,13 @@ const renderWithNavigation = (visible: boolean, onClose = jest.fn()) => {
           />
           <Stack.Screen name={MobileRoutes.LIVE} component={() => null} />
           <Stack.Screen name={MobileRoutes.LEAGUE} component={() => null} />
+          <Stack.Screen
+            name={MobileRoutes.SUPPORT_US}
+            component={() => {
+              const { Text } = require('react-native');
+              return <Text testID="support-us-screen-marker">Support Us Screen</Text>;
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </I18nextProvider>
@@ -94,6 +101,11 @@ describe('SideMenu', () => {
       // The sections are rendered - we can verify by the arrow icons
       expect(screen.getAllByTestId(/arrow-down/).length).toBe(2);
     });
+
+    it('renders the Support Us button as a top-level item, not inside a section', () => {
+      renderWithNavigation(true);
+      expect(screen.getByTestId('support-us-nav-button')).toBeTruthy();
+    });
   });
 
   describe('Interaction', () => {
@@ -115,13 +127,23 @@ describe('SideMenu', () => {
 
     it('shows up arrow when section is expanded', () => {
       renderWithNavigation(true);
-      
+
       expect(screen.getAllByTestId(/arrow-down/).length).toBe(2);
       expect(screen.queryByTestId(/arrow-up/)).toBeNull();
-      
+
       fireEvent.press(screen.getAllByTestId(/arrow-down/)[0]);
-      
+
       expect(screen.queryByTestId(/arrow-up/)).toBeTruthy();
+    });
+
+    it('navigates to the Support Us screen and closes the menu when pressed', () => {
+      const onClose = jest.fn();
+      renderWithNavigation(true, onClose);
+
+      fireEvent.press(screen.getByTestId('support-us-nav-button'));
+
+      expect(screen.getByTestId('support-us-screen-marker')).toBeTruthy();
+      expect(onClose).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -201,6 +223,13 @@ describe('SideMenu', () => {
       const linkButton = screen.getByTestId('link-button-navbar.home');
       expect(linkButton.props.accessibilityLabel).toBe('Home');
       expect(linkButton.props.accessibilityRole).toBe('button');
+    });
+
+    it('exposes the translated label and role on the Support Us button', () => {
+      renderWithNavigation(true);
+      const supportUsButton = screen.getByTestId('support-us-nav-button');
+      expect(supportUsButton.props.accessibilityLabel).toBe('Support Us');
+      expect(supportUsButton.props.accessibilityRole).toBe('button');
     });
   });
 });
