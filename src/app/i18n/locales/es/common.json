@@ -21,7 +21,9 @@
     "copySuccessTitle": "Copiado",
     "copySuccessMessage": "Dirección de Bitcoin copiada al portapapeles.",
     "copyErrorTitle": "Error al copiar",
-    "copyErrorMessage": "No se pudo copiar la dirección de Bitcoin. Intentalo de nuevo."
+    "copyErrorMessage": "No se pudo copiar la dirección de Bitcoin. Intentalo de nuevo.",
+    "showQrCode": "Mostrar código QR",
+    "hideQrCode": "Ocultar código QR"
   },
   "navigationTitles": {
     "mainmenu": "Menú principal",

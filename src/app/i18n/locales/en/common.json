@@ -21,7 +21,9 @@
     "copySuccessTitle": "Copied",
     "copySuccessMessage": "Bitcoin address copied to clipboard.",
     "copyErrorTitle": "Copy failed",
-    "copyErrorMessage": "Could not copy the Bitcoin address. Please try again."
+    "copyErrorMessage": "Could not copy the Bitcoin address. Please try again.",
+    "showQrCode": "Show QR code",
+    "hideQrCode": "Hide QR code"
   },
   "navigationTitles": {
     "mainmenu": "App Navigation",

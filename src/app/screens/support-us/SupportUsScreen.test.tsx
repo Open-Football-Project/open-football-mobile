@@ -10,6 +10,16 @@ jest.mock('react-i18next', () => ({
   }),
 }));
 
+jest.mock('react-native-qrcode-svg', () => {
+  const ReactLocal = require('react');
+  const { View } = require('react-native');
+  return {
+    __esModule: true,
+    default: (props: { value: string }) =>
+      ReactLocal.createElement(View, { testID: 'btc-qr-code', ...props }),
+  };
+});
+
 describe('SupportUsScreen', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -56,5 +66,41 @@ describe('SupportUsScreen', () => {
     const button = screen.getByTestId('copy-btc-address-button');
     expect(button.props.accessibilityLabel).toBe('supportus.copyButton');
     expect(button.props.accessibilityRole).toBe('button');
+  });
+
+  it('renders the QR code for the bitcoin URI by default', () => {
+    render(<SupportUsScreen />);
+
+    expect(screen.getByTestId('btc-qr-code').props.value).toBe(
+      'bitcoin:bc1qmocktestaddress0000000000000000000000?message=Open%20Football%20Project'
+    );
+  });
+
+  it('hides the QR code when the toggle button is pressed', () => {
+    render(<SupportUsScreen />);
+
+    fireEvent.press(screen.getByTestId('toggle-qr-code-button'));
+
+    expect(screen.queryByTestId('btc-qr-code')).toBeNull();
+  });
+
+  it('shows the QR code again when the toggle button is pressed a second time', () => {
+    render(<SupportUsScreen />);
+
+    fireEvent.press(screen.getByTestId('toggle-qr-code-button'));
+    fireEvent.press(screen.getByTestId('toggle-qr-code-button'));
+
+    expect(screen.getByTestId('btc-qr-code')).toBeTruthy();
+  });
+
+  it('exposes an accessibility label reflecting the current toggle state', () => {
+    render(<SupportUsScreen />);
+
+    const toggle = screen.getByTestId('toggle-qr-code-button');
+    expect(toggle.props.accessibilityLabel).toBe('supportus.hideQrCode');
+
+    fireEvent.press(toggle);
+
+    expect(toggle.props.accessibilityLabel).toBe('supportus.showQrCode');
   });
 });
