@@ -39,7 +39,7 @@ const DayMatchRow = ({ match, apiService }: Props) => {
       apiService={apiService}
       onPress={handlePress}
       cardStyle={[styles.row, match.isLiveNow && styles.liveRow]}
-      sizing={{ statusWidth: ms(50), scoreWidth: ms(60) }}
+      sizing={{ scoreWidth: ms(60) }}
     />
   );
 };

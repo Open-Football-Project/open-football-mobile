@@ -36,7 +36,6 @@ export interface MatchRowSizing {
   scoreFontSize?: number;
   logoSize?: number;
   teamGap?: number;
-  statusWidth?: number;
   scoreWidth?: number;
 }
 
@@ -104,20 +103,20 @@ const MatchRow = ({
 
   return (
     <View style={cardStyle} testID={`${testID}-card`}>
+      <View style={styles.statusRow}>
+        <StatusOrTime
+          isFinished={match.isFinished}
+          statusShort={match.statusShort}
+          utcDate={match.date}
+        />
+      </View>
+
       <Container
         onPress={onPress}
         style={[styles.row, style]}
         testID={testID}
         accessibilityLabel={`${match.homeTeamName} vs ${match.awayTeamName}`}
       >
-        <View style={[styles.status, { width: resolvedSizing.statusWidth }]}>
-          <StatusOrTime
-            isFinished={match.isFinished}
-            statusShort={match.statusShort}
-            utcDate={match.date}
-          />
-        </View>
-
         <View style={[styles.team, styles.homeTeam, { gap: resolvedSizing.teamGap }]}>
           {logoOuter ? [homeLogo, homeName] : [homeName, homeLogo]}
         </View>
@@ -131,18 +130,13 @@ const MatchRow = ({
         <View style={[styles.team, styles.awayTeam, { gap: resolvedSizing.teamGap }]}>
           {logoOuter ? [awayName, awayLogo] : [awayLogo, awayName]}
         </View>
-
-        <View style={styles.buttonWrapper}>
-          <MatchButton isLiveNow={match.isLiveNow} fixtureId={match.fixtureId} />
-        </View>
       </Container>
 
-      {(isCharteableMatchNow || isTopGuysAvailable) && (
-        <View style={styles.entryPointsRow}>
-          {isCharteableMatchNow && <ChartButton fixtureId={match.fixtureId} />}
-          {isTopGuysAvailable && <TopGuysButton fixtureId={match.fixtureId} />}
-        </View>
-      )}
+      <View style={styles.entryPointsRow}>
+        {isCharteableMatchNow && <ChartButton fixtureId={match.fixtureId} />}
+        {isTopGuysAvailable && <TopGuysButton fixtureId={match.fixtureId} />}
+        <MatchButton isLiveNow={match.isLiveNow} fixtureId={match.fixtureId} />
+      </View>
     </View>
   );
 };
@@ -158,9 +152,9 @@ const styles = StyleSheet.create({
     gap: spacing.xs,
     marginTop: spacing.xs,
   },
-  status: {
-    alignItems: 'center',
-    justifyContent: 'center',
+  statusRow: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
   },
   team: {
     flex: 1,
@@ -183,10 +177,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: colors.brand.yellow,
     fontWeight: fontWeight.bold,
-  },
-  buttonWrapper: {
-    marginLeft: spacing.xs,
-    marginRight: spacing.xxs,
   },
 });
 

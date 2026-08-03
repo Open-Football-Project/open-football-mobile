@@ -31,6 +31,17 @@ const LiveMatchCard = ({ match, isSelected, onPress, apiService }: LiveMatchCard
     >
       {isSelected && <View testID="selected-accent" style={styles.selectedAccent} />}
 
+      <View style={styles.statusRow}>
+        <View style={styles.timerBlock}>
+          <TimerIcon size={10} color={colors.brand.success} testID={`timer-icon-${match.id}`} />
+          <Text style={styles.elapsedTime} testID={`elapsed-time-${match.id}`}>
+            {match.elapsedTime
+              ? `${Math.floor(match.elapsedTime)}${match.extraTime ? `+${match.extraTime}` : ''}'`
+              : '-'}
+          </Text>
+        </View>
+      </View>
+
       <View style={styles.teamsRow}>
         <View style={styles.teamSide}>
           <Logo src={match.homeTeamLogo ?? undefined} size={16} />
@@ -53,29 +64,11 @@ const LiveMatchCard = ({ match, isSelected, onPress, apiService }: LiveMatchCard
         </View>
       </View>
 
-      <View style={styles.bottomRow}>
-        <View style={styles.timerBlock}>
-          <TimerIcon size={10} color={colors.brand.success} testID={`timer-icon-${match.id}`} />
-          <Text style={styles.elapsedTime} testID={`elapsed-time-${match.id}`}>
-            {match.elapsedTime
-              ? `${Math.floor(match.elapsedTime)}${match.extraTime ? `+${match.extraTime}` : ''}'`
-              : '-'}
-          </Text>
-        </View>
-        {match.statusShort ? (
-          <Text style={styles.statusText} testID={`status-badge-${match.id}`}>
-            {match.statusShort}
-          </Text>
-        ) : null}
+      <View style={styles.buttonsRow}>
+        {isCharteableMatchNow && <ChartButton fixtureId={match.id} />}
+        {isTopGuysAvailable && <TopGuysButton fixtureId={match.id} />}
         <MatchButton isLiveNow={false} fixtureId={match.id} />
       </View>
-
-      {(isCharteableMatchNow || isTopGuysAvailable) && (
-        <View style={styles.entryPointsRow}>
-          {isCharteableMatchNow && <ChartButton fixtureId={match.id} />}
-          {isTopGuysAvailable && <TopGuysButton fixtureId={match.id} />}
-        </View>
-      )}
     </Pressable>
   );
 };
@@ -101,6 +94,14 @@ const styles = StyleSheet.create({
     width: 3,
     backgroundColor: colors.brand.rose,
     zIndex: 1,
+  },
+  statusRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    gap: spacing.xs,
+    paddingHorizontal: spacing.sm,
+    paddingTop: spacing.sm,
   },
   teamsRow: {
     flexDirection: 'row',
@@ -137,10 +138,10 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.bold,
     color: colors.brand.cream,
   },
-  bottomRow: {
+  buttonsRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     paddingHorizontal: spacing.sm,
     paddingBottom: spacing.sm,
     paddingTop: spacing.sm,
@@ -157,20 +158,6 @@ const styles = StyleSheet.create({
     fontSize: fontSize.xs,
     fontWeight: fontWeight.semibold,
     color: colors.brand.success,
-  },
-  statusText: {
-    fontSize: 9,
-    fontWeight: fontWeight.semibold,
-    color: colors.text.primary,
-    textTransform: 'uppercase',
-    flex: 1,
-  },
-  entryPointsRow: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    gap: spacing.xs,
-    paddingHorizontal: spacing.sm,
-    paddingBottom: spacing.sm,
   },
 });
 

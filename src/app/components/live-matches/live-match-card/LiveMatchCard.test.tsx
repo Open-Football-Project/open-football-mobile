@@ -119,20 +119,6 @@ describe('LiveMatchCard', () => {
     expect(screen.getByTestId('elapsed-time-1')).toHaveTextContent("90+3'");
   });
 
-  it('renders a status badge only when statusShort is present', () => {
-    const withStatus = { ...match, statusShort: 'HT' } as LiveMatch;
-    render(<LiveMatchCard match={withStatus} isSelected={false} onPress={jest.fn()} apiService={mockApiService} />);
-
-    expect(screen.getByTestId('status-badge-1')).toHaveTextContent('HT');
-  });
-
-  it('does not render a status badge when statusShort is empty', () => {
-    const noStatus = { ...match, statusShort: '' } as LiveMatch;
-    render(<LiveMatchCard match={noStatus} isSelected={false} onPress={jest.fn()} apiService={mockApiService} />);
-
-    expect(screen.queryByTestId('status-badge-1')).toBeNull();
-  });
-
   it('renders the match button for this fixture', () => {
     render(<LiveMatchCard match={match} isSelected={false} onPress={jest.fn()} apiService={mockApiService} />);
 
