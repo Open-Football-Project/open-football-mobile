@@ -83,8 +83,8 @@ android {
         applicationId "com.futballero"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 32
-        versionName "22.22.0"
+        versionCode 33
+        versionName "22.23.0"
     }
     signingConfigs {
         debug {
