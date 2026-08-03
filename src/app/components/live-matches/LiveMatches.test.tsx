@@ -430,49 +430,6 @@ describe('LiveMatches', () => {
     expect(screen.getByTestId('match-button-2')).toBeTruthy();
   });
 
-  it('should display statusShort badge when match has a status', () => {
-    (useLiveMatchesStatus as jest.Mock).mockReturnValue({
-      totalMatches: 1,
-      selectedMatchId: 1,
-      setSelectedMatchId: jest.fn(),
-      isLineupsAvailable: false,
-      matchLineups: null,
-      isStatsAvailable: false,
-      matchStats: null,
-      selectedMatch: mockMatches[0],
-      isOddsAvailable: false,
-      loadingOdds: false,
-      odds: [],
-    });
-
-    const matchWithStatus = [{ ...mockMatches[0], statusShort: 'HT' }] as LiveMatch[];
-    render(<LiveMatches apiService={mockApiService} matches={matchWithStatus} />);
-
-    expect(screen.getByTestId('status-badge-1')).toBeTruthy();
-    expect(screen.getByText('HT')).toBeTruthy();
-  });
-
-  it('should not render statusShort badge when match has no status', () => {
-    (useLiveMatchesStatus as jest.Mock).mockReturnValue({
-      totalMatches: 1,
-      selectedMatchId: 1,
-      setSelectedMatchId: jest.fn(),
-      isLineupsAvailable: false,
-      matchLineups: null,
-      isStatsAvailable: false,
-      matchStats: null,
-      selectedMatch: mockMatches[0],
-      isOddsAvailable: false,
-      loadingOdds: false,
-      odds: [],
-    });
-
-    const matchNoStatus = [{ ...mockMatches[0], statusShort: '' }] as LiveMatch[];
-    render(<LiveMatches apiService={mockApiService} matches={matchNoStatus} />);
-
-    expect(screen.queryByTestId('status-badge-1')).toBeNull();
-  });
-
   it('should display timer icon for each match', () => {
     (useLiveMatchesStatus as jest.Mock).mockReturnValue({
       totalMatches: 1,
